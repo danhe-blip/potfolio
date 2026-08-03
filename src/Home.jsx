@@ -108,9 +108,7 @@ export default function Home({ navigate }) {
             <span>{w.num}</span>
             <span className="head-end">
               <span>[{w.type}]</span>
-              <span className="wip-status" aria-label="Case study in progress">
-                <span className="wip-dot" aria-hidden="true">●</span> WIP
-              </span>
+              <span className="wip-status" aria-label="Case study in progress">WIP</span>
             </span>
           </div>
           <div className="cell-text">

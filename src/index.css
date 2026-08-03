@@ -173,16 +173,10 @@ img { max-width: 100%; display: block; }
 .cell--wip:hover .head, .cell--wip:hover .cell-text { opacity: 0.72; }
 .head-end { display: inline-flex; align-items: center; gap: 12px; }
 .wip-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   letter-spacing: 0.14em;
-  color: var(--mut);
-}
-.wip-dot {
-  color: var(--red);
-  font-size: 8px;
-  animation: blink 1.6s steps(2, start) infinite;
+  color: rgba(247, 245, 240, 0.34);
+  border: 1px solid rgba(247, 245, 240, 0.16);
+  padding: 1px 6px;
 }
 
 .cell--paper::before { background: var(--paper); }
