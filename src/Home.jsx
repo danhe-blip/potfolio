@@ -106,11 +106,13 @@ export default function Home({ navigate }) {
           </div>
           <div className="head mono">
             <span>{w.num}</span>
-            <span>[{w.type}]</span>
+            <span className="head-end">
+              <span>[{w.type}]</span>
+              <span className="wip-status" aria-label="Case study in progress">
+                <span className="wip-dot" aria-hidden="true">●</span> WIP
+              </span>
+            </span>
           </div>
-          <span className="wip-status mono" aria-label="Case study in progress">
-            <span className="wip-dot" aria-hidden="true">●</span> WIP
-          </span>
           <div className="cell-text">
             <div className="title">{w.title}</div>
             <div className="tagline">{w.tagline}</div>
