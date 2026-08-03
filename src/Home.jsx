@@ -152,12 +152,14 @@ export default function Home({ navigate }) {
             <Kaleido params={heroParams} />
           </div>
           <div className="hero-body">
-            <h1 className="hero-title">
-              {SITE.heroTitleA}<br />
-              <em>{SITE.heroTitleB}</em>
-            </h1>
+            <div className="hero-lede">
+              <h1 className="hero-title">
+                {SITE.heroTitleA}<br />
+                <em>{SITE.heroTitleB}</em>
+              </h1>
+              <p className="hero-blurb mono">{SITE.heroBlurb}</p>
+            </div>
             <div className="hero-foot mono">
-              <span className="hero-blurb">{SITE.heroBlurb}</span>
               {!deckOpen && (
                 <div className="hero-meta">
                   <span className="art-sig" aria-hidden="true">{SITE.artSignature}</span>
