@@ -91,30 +91,58 @@ export default function Home({ navigate }) {
     };
   };
 
-  const workCell = (w, i, extra = "") => (
-    <button
-      key={w.id}
-      className={`cell link cell--work reveal ${extra}`}
-      data-art-host
-      style={{ animationDelay: `${90 + i * 70}ms` }}
-      onClick={() => navigate(w.id)}
-      onMouseEnter={() => setHovered(w.id)}
-      onMouseLeave={() => setHovered((h) => (h === w.id ? null : h))}
-    >
-      <div className="cell-art" aria-hidden="true">
-        <Kaleido params={iconParams(w, i)} />
-      </div>
-      <div className="head mono">
-        <span>{w.num}</span>
-        <span>[{w.type}]</span>
-      </div>
-      <span className="arrow">↗</span>
-      <div className="cell-text">
-        <div className="title">{w.title}</div>
-        <div className="tagline">{w.tagline}</div>
-      </div>
-    </button>
-  );
+  const workCell = (w, i, extra = "") => {
+    if (w.wip) {
+      return (
+        <div
+          key={w.id}
+          className={`cell cell--work cell--wip reveal ${extra}`}
+          data-art-host
+          style={{ animationDelay: `${90 + i * 70}ms` }}
+          aria-disabled="true"
+        >
+          <div className="cell-art" aria-hidden="true">
+            <Kaleido params={iconParams(w, i)} />
+          </div>
+          <div className="head mono">
+            <span>{w.num}</span>
+            <span>[{w.type}]</span>
+          </div>
+          <span className="wip-status mono" aria-label="Case study in progress">
+            <span className="wip-dot" aria-hidden="true">●</span> WIP
+          </span>
+          <div className="cell-text">
+            <div className="title">{w.title}</div>
+            <div className="tagline">{w.tagline}</div>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <button
+        key={w.id}
+        className={`cell link cell--work reveal ${extra}`}
+        data-art-host
+        style={{ animationDelay: `${90 + i * 70}ms` }}
+        onClick={() => navigate(w.id)}
+        onMouseEnter={() => setHovered(w.id)}
+        onMouseLeave={() => setHovered((h) => (h === w.id ? null : h))}
+      >
+        <div className="cell-art" aria-hidden="true">
+          <Kaleido params={iconParams(w, i)} />
+        </div>
+        <div className="head mono">
+          <span>{w.num}</span>
+          <span>[{w.type}]</span>
+        </div>
+        <span className="arrow">↗</span>
+        <div className="cell-text">
+          <div className="title">{w.title}</div>
+          <div className="tagline">{w.tagline}</div>
+        </div>
+      </button>
+    );
+  };
 
   return (
     <>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { WORKS } from "./config";
+import { WORKS, ABOUT } from "./config";
 import ShotGrid from "./ShotGrid";
 import CompositionDiagram from "./CompositionDiagram";
 
@@ -25,7 +25,8 @@ export default function WorkPage({ doc, navigate }) {
   const jump = (id) => refs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   const idx = WORKS.findIndex((w) => w.id === doc.id);
-  const next = idx === -1 ? WORKS[0] : WORKS[(idx + 1) % WORKS.length];
+  const pool = WORKS.filter((w) => !w.wip && w.id !== doc.id);
+  const next = pool.find((w) => WORKS.indexOf(w) > idx) || pool[0] || ABOUT;
 
   return (
     <div className="doc">

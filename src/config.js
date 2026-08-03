@@ -138,6 +138,7 @@ export const WORKS = [
   },
   {
     id: "virtuered",
+    wip: true,
     motif: "clash",
     num: "02",
     title: "VirtueRed",
@@ -183,6 +184,7 @@ export const WORKS = [
   },
   {
     id: "design-system",
+    wip: true,
     motif: "lattice",
     num: "03",
     title: "Design System",
@@ -228,6 +230,7 @@ export const WORKS = [
   },
   {
     id: "branding",
+    wip: true,
     motif: "mark",
     num: "04",
     title: "Branding",
@@ -273,6 +276,7 @@ export const WORKS = [
   },
   {
     id: "website",
+    wip: true,
     motif: "flow",
     num: "05",
     title: "Website",
