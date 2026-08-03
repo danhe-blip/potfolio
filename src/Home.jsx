@@ -152,7 +152,6 @@ export default function Home({ navigate }) {
             <Kaleido params={heroParams} />
           </div>
           <div className="hero-body">
-            <div className="mono" style={{ color: "var(--mut)" }}>{SITE.heroLabel}</div>
             <h1 className="hero-title">
               {SITE.heroTitleA}<br />
               <em>{SITE.heroTitleB}</em>

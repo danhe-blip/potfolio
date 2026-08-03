@@ -6,7 +6,6 @@ export const SITE = {
   status: "Open to work",
   email: "dhe052@hotmail.com",
   linkedin: "#",
-  heroLabel: "Virtue AI — Founding Designer",
   heroTitleA: "AI products,",
   heroTitleB: "end to end.",
   heroBlurb: "Product, systems, brand, web. One designer, fewer handoffs.",
