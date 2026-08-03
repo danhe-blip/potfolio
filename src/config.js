@@ -9,7 +9,7 @@ export const SITE = {
   heroLabel: "Virtue AI — Founding Designer",
   heroTitleA: "AI products,",
   heroTitleB: "end to end.",
-  heroBlurb: "Product, systems, brand, web — one designer, zero handoffs.",
+  heroBlurb: "Product, systems, brand, web. One designer, fewer handoffs.",
   artSignature: "Kernel — generative study",
 };
 
