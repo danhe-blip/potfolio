@@ -227,11 +227,11 @@ img { max-width: 100%; display: block; }
 }
 .hero-body > .mono:first-child { align-self: flex-start; background: rgba(17, 17, 17, 0.75); padding: 5px 10px; }
 .hero-title {
-  font-size: clamp(28px, 3.5vw, 48px);
+  font-size: clamp(26px, 3vw, 42px);
   line-height: 1.02;
   letter-spacing: -0.025em;
   font-weight: 600;
-  max-width: 22ch;
+  max-width: 29ch;
 }
 .hero-title em {
   font-family: var(--serif);
@@ -736,7 +736,7 @@ img { max-width: 100%; display: block; }
   .cell { min-height: 128px; padding: 14px; }
   .cell--w2 { grid-column: span 1; }
   .cell--hero { grid-column: span 1; grid-row: span 1; min-height: 62dvh; }
-  .hero-title { font-size: clamp(22px, 7vw, 34px); }
+  .hero-title { font-size: clamp(26px, 7.4vw, 34px); max-width: 100%; }
   .hero-foot { flex-direction: column; align-items: stretch; gap: 10px; font-size: 9px; letter-spacing: 0.03em; overflow-wrap: anywhere; }
   .hero-blurb { max-width: 100%; }
   .hero-meta { flex-direction: row; align-items: center; justify-content: space-between; gap: 10px; width: 100%; }

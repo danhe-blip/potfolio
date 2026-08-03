@@ -7,7 +7,7 @@ export const SITE = {
   email: "dhe052@hotmail.com",
   linkedin: "#",
   heroTitleA: "I design AI products",
-  heroTitleB: "and ship them myself.",
+  heroTitleB: "and ship them to production.",
   heroBlurb: "Founding designer at Virtue AI. Brand, product, systems, web.",
   artSignature: "Kernel — generative study",
 };
