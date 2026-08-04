@@ -61,8 +61,8 @@ export default function Home({ navigate }) {
     const p = hintPos.current;
     const hw = hintRef.current ? hintRef.current.offsetWidth : 0;
     const hh = hintRef.current ? hintRef.current.offsetHeight : 0;
-    p.tx = Math.min(e.clientX - r.left + 18, r.width - hw - 10);
-    p.ty = Math.min(e.clientY - r.top + 24, r.height - hh - 10);
+    p.tx = Math.min(e.clientX - r.left + 14, r.width - hw - 10);
+    p.ty = Math.min(e.clientY - r.top + 18, r.height - hh - 10);
     if (!hintOn) {
       p.x = p.tx;
       p.y = p.ty;
@@ -70,10 +70,10 @@ export default function Home({ navigate }) {
     }
     if (!p.raf) {
       const step = () => {
-        p.x += (p.tx - p.x) * 0.16;
-        p.y += (p.ty - p.y) * 0.16;
+        p.x += (p.tx - p.x) * 0.42;
+        p.y += (p.ty - p.y) * 0.42;
         if (hintRef.current) hintRef.current.style.transform = `translate(${p.x}px, ${p.y}px)`;
-        if (Math.abs(p.tx - p.x) + Math.abs(p.ty - p.y) > 0.4) {
+        if (Math.abs(p.tx - p.x) + Math.abs(p.ty - p.y) > 0.3) {
           p.raf = requestAnimationFrame(step);
         } else {
           p.raf = 0;
