@@ -585,6 +585,70 @@ img { max-width: 100%; display: block; }
 .fig.shot img { width: auto; max-width: 100%; height: auto; object-fit: contain; display: block; margin: 0 auto; }
 .fig.shot figcaption { padding: 10px 12px; color: var(--mut); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; border-top: 1px solid var(--line); }
 
+.gate {
+  margin-bottom: 84px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--red);
+  padding: 26px 24px;
+  background: var(--ink-2);
+  max-width: 62ch;
+}
+.gate .label {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.gate h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+  max-width: 26ch;
+}
+.gate p { font-size: 15px; line-height: 1.7; color: rgba(247, 245, 240, 0.78); }
+.gate-form { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.gate-input {
+  flex: 1 1 200px;
+  min-width: 0;
+  height: 40px;
+  padding: 0 12px;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  color: var(--paper);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.gate-input:focus { border-color: var(--red); }
+.gate-input::placeholder { color: var(--mut-2); text-transform: uppercase; }
+.gate-cta {
+  height: 40px;
+  padding: 0 20px;
+  background: var(--red);
+  color: var(--on-accent);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+.gate-cta:hover { opacity: 0.86; }
+.gate-cta:disabled { opacity: 0.5; cursor: default; }
+.gate-msg {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--mut-2);
+  text-transform: none;
+  line-height: 1.6;
+}
+.gate-msg .bad { color: var(--red); }
+
 .shots { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 16px; }
 .shots-head { display: flex; justify-content: space-between; align-items: baseline; color: var(--mut); margin-bottom: 14px; }
 .shots-count { color: var(--red); }

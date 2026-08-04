@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { WORKS, ABOUT } from "./config";
 import ShotGrid from "./ShotGrid";
 import CompositionDiagram from "./CompositionDiagram";
+import Gate, { GATE_KEY, requestUnlock } from "./Gate";
 
 const renderBody = (text) => {
   const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
@@ -24,14 +25,42 @@ const renderBody = (text) => {
 
 export default function WorkPage({ doc, navigate }) {
   const [active, setActive] = useState(doc.sections[0]?.id);
+  const [unlocked, setUnlocked] = useState(null);
   const refs = useRef({});
+  const sections = unlocked
+    ? [
+        ...doc.sections.map((s) =>
+          unlocked.patch?.[s.id] ? { ...s, ...unlocked.patch[s.id] } : s
+        ),
+        ...(unlocked.sections ?? []),
+      ]
+    : doc.sections;
 
   useEffect(() => {
-    setActive(doc.sections[0]?.id);
+    setUnlocked(null);
+    if (!doc.gate) return;
+    let live = true;
+    let saved = null;
+    try {
+      saved = localStorage.getItem(GATE_KEY);
+    } catch {}
+    if (!saved) return;
+    requestUnlock(doc.id, saved)
+      .then((r) => {
+        if (live && r.ok) setUnlocked(r);
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [doc]);
+
+  useEffect(() => {
+    setActive(sections[0]?.id);
     const onScroll = () => {
       const line = window.scrollY + window.innerHeight * 0.28;
-      let current = doc.sections[0]?.id;
-      for (const s of doc.sections) {
+      let current = sections[0]?.id;
+      for (const s of sections) {
         const el = refs.current[s.id];
         if (el && el.offsetTop <= line) current = s.id;
       }
@@ -39,7 +68,7 @@ export default function WorkPage({ doc, navigate }) {
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [doc]);
+  }, [doc, unlocked]);
 
   const jump = (id) => refs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
 
@@ -50,7 +79,7 @@ export default function WorkPage({ doc, navigate }) {
   return (
     <div className="doc">
       <aside className="rail">
-        {doc.sections.map((s) => (
+        {sections.map((s) => (
           <button key={s.id} className={active === s.id ? "on" : ""} onClick={() => jump(s.id)}>
             {s.label}
           </button>
@@ -88,7 +117,7 @@ export default function WorkPage({ doc, navigate }) {
           </div>
         )}
 
-        {doc.sections.map((s) => (
+        {sections.map((s) => (
           <section key={s.id} className="sec" ref={(el) => (refs.current[s.id] = el)}>
             <div className="label">{s.label}</div>
             <h2>{s.headline}</h2>
@@ -115,6 +144,10 @@ export default function WorkPage({ doc, navigate }) {
                 )}
           </section>
         ))}
+
+        {doc.gate && !unlocked && (
+          <Gate work={doc.id} gate={doc.gate} onUnlock={setUnlocked} />
+        )}
 
         <div className="next-wrap">
           <div className="label mono">Next</div>
