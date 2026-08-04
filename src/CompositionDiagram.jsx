@@ -53,7 +53,7 @@ export default function CompositionDiagram() {
         </div>
       </div>
       <figcaption className="mono">
-        Composition model shaped with the product owner — rules roll up into policy groups, policy groups into a guard.
+        Composition model shaped with the product owner: rules roll up into policy groups, policy groups into a guard.
       </figcaption>
     </figure>
   );

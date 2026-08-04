@@ -72,11 +72,13 @@ Verbatim snapshot of the shipped copy in `src/config.js`. Restore from here if a
 
 **tagline:** The guardrail, rebuilt for the people who own the policy
 
-**sub:** Virtue's most profitable product was an API only ML engineers could use. I reframed it into a product a policy owner at a bank or hospital composes, tests, and ships on their own.
+**sub:** Virtue's Guard shipped as an API that took ML expertise to operate. I reframed it into a product a policy owner at a bank or hospital composes, tests, and ships without an ML engineer in the loop.
 
 **tags:** `0→1` · `AI safety` · `Enterprise` · `2026`
 
-**result:** Reframed Virtue's most profitable API into a product non-engineers ship on their own. Live as the flagship since Jan 2026.
+**result:** Guard went from an API that needed an ML team to a product policy owners run end to end. It is now the product Virtue leads with.
+
+**Revision notes (Aug 2026):** persona axis corrected everywhere: users are engineers without ML expertise plus policy owners, so the copy says "policy owner" and "without an ML team", never "non-engineer". "Profitable" appears exactly once (Context). Outcome rewritten around the closed lifecycle loop plus the eval translation insight (decision made on a diff of real examples, not a bare metric) plus the onboarding story (docs failed, interactive demos fixed learnability for rotating customer teams). Build gained the layering argument: flat one-layer policy products (Lakera, verbal only, never name in copy, never use their screenshot) collapse in enterprises; policy groups are the semantic layer, same logic as primitive vs semantic tokens. Next gained the "what I would move earlier" beat (the first hour). Outcome images trimmed 7 to 4. Text measure unified at 640px (h2, p, doc-sub), body 16px.
 
 ---
 
