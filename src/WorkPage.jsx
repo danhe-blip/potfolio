@@ -52,11 +52,11 @@ export default function WorkPage({ doc, navigate }) {
 
         {doc.photo !== undefined && (
           <figure className="portrait">
-            {doc.photo ? (
-              <img src={doc.photo} alt={doc.title} />
-            ) : doc.portraitAscii ? (
+            {doc.photo && <img src={doc.photo} alt={doc.title} />}
+            {doc.portraitAscii && (
               <pre role="img" aria-label={doc.title}>{doc.portraitAscii}</pre>
-            ) : (
+            )}
+            {!doc.photo && !doc.portraitAscii && (
               <span>[ drop portrait → /public/portrait.jpg, set ABOUT.photo ]</span>
             )}
           </figure>
