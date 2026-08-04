@@ -88,9 +88,6 @@ export const WORKS = [
         label: "03 Problem & Opportunity",
         headline: "The person who owns the policy can't tune the model.",
         body: "Trust-and-safety leads at a bank think in rules and obligations. The ML team thinks in thresholds and eval sets. Our real buyers, healthcare and finance early in their ML maturity, needed our engineers to hand-hold every deployment. That friction wasn't a training gap. It was a product gap. Whoever let the policy owner compose enforcement first, without an ML specialist on call, would own the category.",
-        imgs: [
-          { src: "/work/pg-old-config.png", cap: "The before: checkboxes, a threshold slider, and a raw API call" },
-        ],
       },
       {
         id: "build",
