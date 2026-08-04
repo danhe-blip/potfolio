@@ -66,7 +66,7 @@ export const GATED = {
     patch: {
       context: {
         imgs: [
-          { src: "/work/ds-before-runs.png", cap: "The before: an early runs screen, built fast, no shared parts" },
+          { src: "/work/ds-before-runs.jpg", cap: "The before: an early runs screen, built fast, no shared parts" },
         ],
       },
     },
