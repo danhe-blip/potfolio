@@ -252,7 +252,9 @@ export const WORKS = [
         label: "03 Problem & Opportunity",
         headline: "Vibe coding has no memory and no taste.",
         body: "Raw vibe coding fails in three predictable ways, and all three are properties of the material. Models forget: every session starts blank, and decisions evaporate. Models inflate: one of the first fixes in this repo's history is deleting a grand claim an agent wrote about me. And models default to the average: rounded corners, soft shadows, template typography. None of these are reasons to avoid the material. They are the brief. Each failure mode can be designed around, and that design is the work.",
-        fig: "drop screenshot: CLAUDE.md rules excerpt",
+        imgs: [
+          { src: "/work/aiw-diff.png", cap: "The fix on record: an agent's claim about me, deleted" },
+        ],
       },
       {
         id: "build",
@@ -260,6 +262,7 @@ export const WORKS = [
         headline: "Understand the material, then build the loop around it.",
         body: "Every property of the model got a mechanism. Memory: taste lives in the repo, not in my head or the chat. A rules file locks the palette, the sharp corners, the bracket tags, even the punctuation, so a fresh session reads it and designs like me. Facts: agents never speak for me. Unwritten content stays as explicit placeholders until I fill it, a hard rule against invented biography. Blast radius: all content lives in one config file and components hold only logic, so an agent editing copy cannot break layout. Verification: no visual change ships on the agent's word. It renders the real site in a real browser, desktop and mobile, and shows me the pixels before anything merges. Model choice: different tasks get different models, a creative one for voice, a heavier one for engineering. Decisions: agents present options with previews, not open questions. I pick, reject, or redirect in seconds, and the record of refusals is where the taste lives.\n\nThe tension ran through all of it. My principle was to let agents run fast. What kept breaking it was copy: agents drifted grand, and I kept catching claims I would never make. So precision became a rule, only write what a screenshot can prove, and every user-facing diff still passes through my reading. That cost is permanent, and I pay it on purpose.",
         imgs: [
+          { src: "/work/aiw-rules.png", cap: "CLAUDE.md: the rules every session reads before touching anything" },
           { src: "/work/aiw-verify-desktop.png", cap: "Agent-rendered verification, 1440px" },
           { src: "/work/aiw-verify-mobile.png", cap: "The same check at 390px, before merge" },
         ],

@@ -548,7 +548,7 @@ img { max-width: 100%; display: block; }
 }
 .fig img { width: 100%; height: 100%; object-fit: cover; }
 .fig.shot { aspect-ratio: auto; border-style: solid; display: block; padding: 0; }
-.fig.shot img { width: 100%; height: auto; object-fit: contain; display: block; }
+.fig.shot img { width: auto; max-width: 100%; height: auto; object-fit: contain; display: block; margin: 0 auto; }
 .fig.shot figcaption { padding: 10px 12px; color: var(--mut); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; border-top: 1px solid var(--line); }
 
 .shots { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 16px; }
@@ -576,10 +576,12 @@ img { max-width: 100%; display: block; }
 }
 .shots.in .plate { opacity: 1; transform: translateY(0); }
 .plate img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
   user-select: none;
   -webkit-user-drag: none;
 }
