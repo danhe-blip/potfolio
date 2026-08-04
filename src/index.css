@@ -266,7 +266,6 @@ img { max-width: 100%; display: block; }
 .hero-blurb {
   background: rgba(17, 17, 17, 0.75);
   padding: 5px 10px;
-  max-width: 32ch;
 }
 
 .hero-meta {
