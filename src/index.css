@@ -188,21 +188,53 @@ img { max-width: 100%; display: block; }
   left: 0;
   z-index: 6;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 18px 11px;
+  background: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  white-space: nowrap;
+}
+.cursor-hint::before,
+.cursor-hint::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+}
+.cursor-hint::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid var(--red);
+  border-left: 1px solid var(--red);
+}
+.cursor-hint::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(247, 245, 240, 0.35);
+  border-right: 1px solid rgba(247, 245, 240, 0.35);
+}
+.ch-cmd {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   color: var(--paper);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
 }
-.cursor-hint::before {
-  content: "";
-  width: 6px;
-  height: 6px;
+.ch-dot {
+  width: 5px;
+  height: 5px;
   background: var(--red);
   animation: blink 1.6s steps(2, start) infinite;
+}
+.ch-sub {
+  color: var(--mut);
+  font-size: 8.5px;
+  letter-spacing: 0.24em;
+  padding-left: 13px;
 }
 @media (hover: none) {
   .cursor-hint { display: none; }

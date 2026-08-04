@@ -12,7 +12,8 @@ export const SITE = {
   heroTitleB: "and ship them to production.",
   heroBlurb: "Founding designer at Virtue AI. Brand, product, systems, web.",
   artSignature: "Kernel — generative study",
-  artHint: "press [ tune ] to see the system",
+  artHintCmd: "press [ tune ]",
+  artHintSub: "see the system",
 };
 
 export const NOT_FOUND = {

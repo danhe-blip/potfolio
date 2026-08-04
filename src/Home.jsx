@@ -224,8 +224,12 @@ export default function Home({ navigate }) {
             </div>
           </div>
           {hintOn && !deckOpen && !deckSeen && (
-            <span className="cursor-hint mono" ref={hintRef} aria-hidden="true">
-              {SITE.artHint}
+            <span className="cursor-hint" ref={hintRef} aria-hidden="true">
+              <span className="ch-cmd mono">
+                <span className="ch-dot" />
+                {SITE.artHintCmd}
+              </span>
+              <span className="ch-sub mono">{SITE.artHintSub}</span>
             </span>
           )}
           {deckOpen && <ArtPanel art={art} setArt={setArt} onClose={() => setDeckOpen(false)} />}
