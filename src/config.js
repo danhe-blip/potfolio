@@ -330,7 +330,7 @@ export const ABOUT = {
   type: "Profile",
   tagline: "Founding designer, generalist by necessity",
   sub: "San Francisco Bay Area. Currently the founding designer at Virtue AI.",
-  tags: ["She/her", "SF Bay Area", "Open to work"],
+  tags: ["She/her", "SF Bay Area"],
   photo: "/portrait.jpg",
   portraitAscii: PORTRAIT_ASCII,
   result: null,
