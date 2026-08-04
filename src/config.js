@@ -63,15 +63,15 @@ export const WORKS = [
     title: "PolicyGuard",
     type: "Product",
     tagline: "The guardrail, rebuilt for the people who own the policy",
-    sub: "Virtue's Guard shipped as an API that took ML expertise to operate. I reframed it into a product a policy owner at a bank or hospital composes, tests, and ships without an ML engineer in the loop.",
+    sub: "Virtue's Guard shipped as an API, and every serious deployment still ran through our engineers. I reframed it into a product a policy owner at a bank or hospital composes, tests, and ships on their own.",
     tags: ["0→1", "AI safety", "Enterprise"],
-    result: "Guard went from an API that needed an ML team to a product policy owners run end to end. It is now the product Virtue leads with.",
+    result: "Guard went from an API our engineers hand-held to a product policy owners run end to end. It is now the product Virtue leads with.",
     sections: [
       {
         id: "context",
         label: "01 Context",
-        headline: "The most profitable product was an API only ML engineers could use.",
-        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and it quietly became our most profitable line. The demand was there. The form wasn't. A profitable product proves demand, not that it's in the right shape.",
+        headline: "Guard worked as an API. Every deployment still ran through us.",
+        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and enterprises were already adopting it. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The demand was there. The form wasn't. Demand proves a need is real, not that the product is in the right shape.",
         imgs: [
           { src: "/work/pg-dashboard-light.png", cap: "Dashboard, production scale" },
           { src: "/work/pg-dashboard-dark.png", cap: "Same dashboard, dark theme" },
@@ -81,7 +81,7 @@ export const WORKS = [
         id: "focus",
         label: "02 Focus",
         headline: "I bet the opportunity was who could use it, not what it could do.",
-        body: "I could have kept hardening the API for the engineers who already loved it. I focused elsewhere. This was a genuinely powerful tool, and its power was trapped behind ML expertise. The teams adopting it, engineers included, don't keep that expertise on hand. If the people who own the policy could wield the tool without an ML team behind them, that reach is where the larger business value was, not another model feature. Widening who can hold a powerful tool beats deepening it for the few who already can.",
+        body: "I could have kept hardening the API for the engineers who already loved it. I focused elsewhere. This was a genuinely powerful tool, but wielding it well meant thresholds, eval sets, and deployment cycles. The people accountable for what it enforces, the policy owners, couldn't touch it at all. If they could wield it directly, that reach is where the larger business value was, not another model feature. Widening who can hold a powerful tool beats deepening it for the few who already can.",
       },
       {
         id: "problem",
