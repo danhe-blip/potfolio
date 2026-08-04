@@ -47,9 +47,9 @@ img { max-width: 100%; display: block; }
 
 .topbar {
   height: var(--bar-h);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
   padding: 0 20px;
   border-bottom: 1px solid var(--line);
@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
   background: var(--ink);
   z-index: 800;
 }
-.topbar .brand { display: flex; align-items: center; gap: 9px; font-weight: 500; }
+.topbar .brand { display: flex; align-items: center; gap: 9px; font-weight: 500; justify-self: start; }
 .mark {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -84,7 +84,7 @@ img { max-width: 100%; display: block; }
 .topbar nav { display: flex; gap: 22px; }
 .topbar a, .topbar button { color: var(--mut); transition: color 0.15s; }
 .topbar a:hover, .topbar button:hover { color: var(--paper); }
-.topbar .meta { display: flex; gap: 18px; color: var(--mut-2); }
+.topbar .meta { display: flex; gap: 18px; color: var(--mut-2); justify-self: end; }
 .blink { animation: blink 1.6s steps(2, start) infinite; color: var(--red); }
 @keyframes blink { to { visibility: hidden; } }
 
@@ -741,7 +741,8 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 900px) {
   :root { --bar-h: 44px; }
-  .topbar { padding: 0 14px; }
+  .topbar { padding: 0 14px; gap: 10px; }
+  .topbar nav { gap: 16px; }
   .topbar .meta .loc { display: none; }
   .board { grid-template-columns: 1fr; grid-template-rows: none; }
   .cell { min-height: 128px; padding: 14px; }
