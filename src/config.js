@@ -371,8 +371,14 @@ export const ABOUT = {
       body: "AI product design · 0→1 products · Design systems · Enterprise UX · Prototyping in code · Brand & web · Working with AI tooling as a daily collaborator.",
     },
     {
+      id: "offscreen",
+      label: "04 Off the clock",
+      headline: "Classical music, tennis, badminton.",
+      body: "Three things that reward precision and repetition. The overlap with the work is hard to miss.",
+    },
+    {
       id: "contact",
-      label: "04 Contact",
+      label: "05 Contact",
       headline: "Say hi.",
       body: "dhe052@hotmail.com, or find me on LinkedIn. Based in the SF Bay Area, working with teams building serious AI tools.",
     },
