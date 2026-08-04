@@ -269,7 +269,9 @@ export const WORKS = [
         label: "05 Outcome",
         headline: "A designed site, no design file. Then the design file, generated from code.",
         body: "The Index is live: a modular grid over a generative ASCII engine with its own control deck, five works, case pages built for reading. Iteration runs at conversation speed; a hero rewrite goes from sentence to production in minutes. And Figma did appear, at the end, pointed the other way on purpose. Through MCP, agents pushed the CSS tokens into Figma as variables, each carrying its code name, var(--ink), var(--red), as its dev-mode syntax. Figma documents the system. It never designed it.",
-        fig: "drop screenshot: Figma variables generated from the code tokens",
+        imgs: [
+          { src: "/work/aiw-figma-variables.png", cap: "Foundations in Figma: every token carries its var() name" },
+        ],
       },
       {
         id: "contribution",
