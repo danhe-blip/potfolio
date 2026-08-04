@@ -223,9 +223,9 @@ img { max-width: 100%; display: block; }
   padding: 20px;
   background:
     linear-gradient(90deg, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0) 55%),
-    linear-gradient(180deg, rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.05) 40%, rgba(17, 17, 17, 0.55));
+    linear-gradient(180deg, rgba(17, 17, 17, 0.12), rgba(17, 17, 17, 0.34) 48%, rgba(17, 17, 17, 0.55));
 }
-.hero-lede { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.hero-lede { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; margin-top: auto; margin-bottom: auto; }
 .hero-title {
   font-size: clamp(26px, 3vw, 42px);
   line-height: 1.02;
