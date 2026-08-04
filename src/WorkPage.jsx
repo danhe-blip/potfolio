@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { WORKS, ABOUT } from "./config";
 import ShotGrid from "./ShotGrid";
 import CompositionDiagram from "./CompositionDiagram";
+import SystemLayers from "./SystemLayers";
 import Gate, { GATE_KEY, requestUnlock } from "./Gate";
 
 const renderBody = (text) => {
@@ -123,6 +124,21 @@ export default function WorkPage({ doc, navigate }) {
             <h2>{s.headline}</h2>
             <p>{renderBody(s.body)}</p>
             {s.diagram === "composition" && <CompositionDiagram />}
+            {s.diagram === "layers" && <SystemLayers />}
+            {s.compare && (
+              <figure className="compare">
+                {[s.compare.left, s.compare.right].map((side) => (
+                  <div key={side.label} className="compare-side">
+                    <div className="compare-label mono">{side.label}</div>
+                    {side.src ? (
+                      <img src={side.src} alt={side.label} loading="lazy" />
+                    ) : (
+                      <div className="compare-slot mono">[ {side.fig} ]</div>
+                    )}
+                  </div>
+                ))}
+              </figure>
+            )}
             {s.link && (s.link.to === "about" || WORKS.some((w) => w.id === s.link.to && !w.confidential)) && (
               <button className="sec-link mono" onClick={() => navigate(s.link.to)}>
                 {s.link.label} <span className="a">→</span>

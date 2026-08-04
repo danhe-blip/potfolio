@@ -165,6 +165,14 @@ Sources: Together AI Greenhouse JD (job-boards.greenhouse.io/togetherai/jobs/506
 
 **CONFIRMED (from Dan, Jul 2026):** The system is code-first. `packages/shared-ui` in the Virtue frontend monorepo IS the design system. "Source of truth in the repo" is her strongest defensible judgment; build the Focus/Build beats around it.
 
+## Design System — DRAFTED (Aug 2026, from Dan's narration)
+
+Full 7-beat copy is live in config.js, still `confidential: true` (Private on the board) until Dan opts to publish or gate it. Facts came from her spoken outline and are authoritative: no design system and no dedicated front-end engineers when she joined; audit lenses were repetition, inconsistency, dev friction; the key call was shadcn as foundation to spend craft on product, not basics; "Virtue V0" is the customized layer (tokens, brand, AI workflow components); prioritization by reuse and engineering overhead; tiers are foundations, primitives, composites, domain; the first front-end engineer joined as PolicyGuard kicked off and the system evolved inside product work, components mapped to code, tokens tuned while shipping; VirtueRed refactor hardened it as v2; closing stance is "a product, not a project, grown through use."
+
+Structure: 01 Context (no shared language) / 02 The Audit / 03 The Call (shadcn) / 04 The Build (compare block: shadcn base vs Virtue V0, plus the four-tier layers diagram, both are new WorkPage features: `compare` field and `diagram: "layers"` via SystemLayers.jsx) / 05 In Product / 06 Outcome / 07 Next (links to PolicyGuard, "watch the parts repeat").
+
+Still `[Dan fills]`: one concrete outcome signal in 06. Images to capture: the before wall (01), stock shadcn component and the same component in Virtue V0 (04 compare slots take `src` once ready).
+
 ## Design System — NEXT (spine + open questions)
 
 This is the priority for the upcoming design-system interview. Recommended spine (all provable from PolicyGuard screenshots):
