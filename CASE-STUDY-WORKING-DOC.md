@@ -171,7 +171,11 @@ Full 7-beat copy is live in config.js, still `confidential: true` (Private on th
 
 Structure: 01 Context (no shared language) / 02 The Audit / 03 The Call (shadcn) / 04 The Build (compare block: shadcn base vs Virtue V0, plus the four-tier layers diagram, both are new WorkPage features: `compare` field and `diagram: "layers"` via SystemLayers.jsx) / 05 In Product / 06 Outcome / 07 Next (links to PolicyGuard, "watch the parts repeat").
 
-Still `[Dan fills]`: one concrete outcome signal in 06. Images to capture: the before wall (01), stock shadcn component and the same component in Virtue V0 (04 compare slots take `src` once ready).
+GATED (Aug 2026): like PolicyGuard, the case is public through 01 Context plus the Result callout, then a name gate. Sections 02 through 08 live in api/_gated.js under "design-system". Confidential flag removed; the cell is clickable.
+
+New confirmed facts (Aug 2026, from Dan): outcome is faster product work plus readiness for the next product, an agent guardrail, which inherits the system on day one ("each product leaves the next one faster"). And the source-of-truth inversion: Storybook is the single source of truth; she and the front-end engineer pushed the system back INTO Figma, so Figma is versioned documentation generated from shipped code, not the master. That is beat 06 Source of Truth. Final structure: 01 Context / 02 Audit / 03 Call / 04 Build / 05 In Product / 06 Source of Truth / 07 Outcome / 08 Next.
+
+Images Dan still needs to drop into public/work/ (paths already wired in the gated payload): ds-before-runs.png (old Runs page), ds-shadcn-to-v0.png (her composite: Shadcn UI vs Virtue V0 run cards), ds-two-products.png (VirtueRed Scans + VirtueGuard Guards side by side), ds-figma-docs.png (the pushed-back Figma DS file with Button/Card/Checkbox/Textarea sheets).
 
 ## Design System — NEXT (spine + open questions)
 

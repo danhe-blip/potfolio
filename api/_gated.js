@@ -62,4 +62,68 @@ export const GATED = {
       },
     ],
   },
+  "design-system": {
+    patch: {
+      context: {
+        imgs: [
+          { src: "/work/ds-before-runs.png", cap: "The before: an early runs screen, built fast, no shared parts" },
+        ],
+      },
+    },
+    sections: [
+      {
+        id: "audit",
+        label: "02 The Audit",
+        headline: "I looked for repetition, inconsistency, and dev friction.",
+        body: "Before building anything, I audited what existed through three lenses. Where were we building the same thing twice? Where did the same element look different for no reason? And where did engineers slow down or improvise because no standard part existed? The audit turned taste into a ranked list: what the system had to fix first, ordered by what each gap was costing us.",
+      },
+      {
+        id: "call",
+        label: "03 The Call",
+        headline: "Start from shadcn. Spend the craft on what's ours.",
+        body: "The founding-designer trap is rebuilding basics to prove you can. With no front-end team and two products moving, hand-built buttons and dialogs would have been craft spent where no product lives. I chose shadcn as the foundation: solid, accessible primitives, headless enough to restyle into our own skin. That call bought back the budget for what no library ships: our tokens, our brand, and the components AI workflows actually need.",
+      },
+      {
+        id: "build",
+        label: "04 The Build",
+        headline: "From shadcn base to Virtue V0.",
+        body: "The distance between stock and ours is the design work. Between the base and Virtue V0 sit the tokens, color, type, spacing, and radius mapped to the brand, and above them the tiers: restyled primitives, composites assembled from them, and the domain layer no library could know, cards for runs and policies, query tables, session traces. Prioritization was mechanical, not aesthetic: a component earned a slot by how often it recurred and how much engineering it kept costing.",
+        diagram: "layers",
+        imgs: [
+          { src: "/work/ds-shadcn-to-v0.png", cap: "Stock shadcn on the left, Virtue V0 run cards on the right" },
+        ],
+      },
+      {
+        id: "product",
+        label: "05 In Product",
+        headline: "The system grew inside PolicyGuard, not beside it.",
+        body: "As PolicyGuard kicked off, our first dedicated front-end engineer joined, and the system stopped being mine alone. We evolved it inside real product work: components mapped to code in the shared package, tokens tuned as screens shipped, parts promoted into the system only after proving themselves in the product. The VirtueRed refactor then hardened the same parts against a second product. A system that grows through use stays honest. One built in isolation is a bet nobody validated.",
+        imgs: [
+          { src: "/work/ds-two-products.png", cap: "VirtueRed and VirtueGuard, one system, two products" },
+        ],
+      },
+      {
+        id: "truth",
+        label: "06 Source of Truth",
+        headline: "Storybook became the source of truth. Figma became the record.",
+        body: "The system's center of gravity moved as it matured. Components lived in the shared package with every state documented in Storybook, and that became the single source of truth: when Storybook and anything else disagreed, Storybook won. Then, together with our front-end engineer, I pushed the system back into Figma, generated from what had actually shipped. The file everyone expects to be the origin is the archive: a versioned record of the system, not its master. Design tools document the truth. Code is where it lives.",
+        imgs: [
+          { src: "/work/ds-figma-docs.png", cap: "The system pushed back into Figma: documentation of a version, generated from code" },
+        ],
+      },
+      {
+        id: "outcome",
+        label: "07 Outcome",
+        headline: "A product, not a project.",
+        body: "There was no big-bang release and no adoption campaign. The system shipped the way products ship: in increments, pulled by need, judged by whether the next screen arrived faster and matched the last one. It did. Two products now draw from one set of parts, and new screens start assembled instead of blank. The sharper payoff is what comes next. Virtue's next product, a guardrail for agents, will not start at zero: it inherits the tokens, the parts, and the pace on day one. Each product leaves the next one faster. That is what treating the system as a product means.",
+      },
+      {
+        id: "next",
+        label: "08 Next",
+        headline: "The parts, at work.",
+        body: "Every screen in the PolicyGuard case runs on this system. Read it again and watch the parts repeat: the same card, the same tables, the same tokens, on every surface.",
+        link: { to: "policyguard", label: "Open PolicyGuard" },
+      },
+    ],
+  },
 };
