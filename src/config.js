@@ -240,7 +240,7 @@ export const WORKS = [
         id: "context",
         label: "01 Context",
         headline: "The site you are reading was never mocked up.",
-        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. It started the ordinary way, with a moodboard: [Dropbox's brand-guidelines grid](https://brand.dropbox.com), the reading pages of [Raw Materials](https://www.therawmaterials.com), a generative ASCII hero. What never happened is what usually comes next. No artboard, no wireframe, no mockup. Those references went straight to the agents, and the first time I saw the design, it was already real, in a browser.",
+        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. It started the ordinary way, with inspiration: [Dropbox's brand-guidelines grid](https://brand.dropbox.com), the reading pages of [Raw Materials](https://www.therawmaterials.com), a generative ASCII hero. What never happened is what usually comes next. No artboard, no wireframe, no mockup. Those references went straight to the agents, and the first time I saw the design, it was already real, in a browser.",
       },
       {
         id: "focus",
