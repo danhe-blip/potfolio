@@ -63,10 +63,14 @@ export default function Gate({ work, gate, onUnlock }) {
           {state === "checking" ? gate.checking : gate.cta}
         </button>
       </form>
-      <p className="gate-msg mono" role="status">
+      <p className="gate-msg" role="status">
         {state === "denied" && <span className="bad">{gate.denied}</span>}
         {state === "error" && <span className="bad">{gate.error}</span>}
-        {state !== "denied" && state !== "error" && gate.note}
+        {state !== "denied" && state !== "error" && (
+          <>
+            {gate.noteLead} <a href={`mailto:${gate.noteEmail}`}>{gate.noteEmail}</a> {gate.noteTail}
+          </>
+        )}
       </p>
     </section>
   );

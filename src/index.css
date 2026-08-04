@@ -640,13 +640,17 @@ img { max-width: 100%; display: block; }
 .gate-cta:hover { opacity: 0.86; }
 .gate-cta:disabled { opacity: 0.5; cursor: default; }
 .gate-msg {
-  margin-top: 14px;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--mut-2);
+  margin-top: 16px;
+  font-family: var(--sans);
+  font-size: 13px;
+  letter-spacing: 0;
+  color: var(--mut);
   text-transform: none;
-  line-height: 1.6;
+  line-height: 1.5;
+  max-width: 46ch;
 }
+.gate-msg a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--mut-2); }
+.gate-msg a:hover { color: var(--red); text-decoration-color: var(--red); }
 .gate-msg .bad { color: var(--red); }
 
 .shots { margin-top: 30px; border-top: 1px solid var(--line); padding-top: 16px; }
