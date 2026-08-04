@@ -53,10 +53,16 @@ export default function Home({ navigate }) {
   };
 
   const heroMove = (e) => {
+    if (e.target.closest(".hero-meta")) {
+      heroLeave();
+      return;
+    }
     const r = e.currentTarget.getBoundingClientRect();
     const p = hintPos.current;
-    p.tx = e.clientX - r.left + 18;
-    p.ty = e.clientY - r.top + 24;
+    const hw = hintRef.current ? hintRef.current.offsetWidth : 0;
+    const hh = hintRef.current ? hintRef.current.offsetHeight : 0;
+    p.tx = Math.min(e.clientX - r.left + 18, r.width - hw - 10);
+    p.ty = Math.min(e.clientY - r.top + 24, r.height - hh - 10);
     if (!hintOn) {
       p.x = p.tx;
       p.y = p.ty;
@@ -84,7 +90,6 @@ export default function Home({ navigate }) {
     setHintOn(false);
   };
 
-  const variantLabel = ART.variants.find((v) => v.id === art.variant)?.label || art.variant;
 
   useEffect(() => {
     try {
@@ -231,7 +236,7 @@ export default function Home({ navigate }) {
           </div>
           {hintOn && !deckOpen && !deckSeen && (
             <span className="cursor-hint mono" ref={hintRef} aria-hidden="true">
-              {variantLabel} / sym {art.symmetry} / {Number(art.speed).toFixed(1)}x :: {SITE.artHint}
+              {SITE.artHint}
             </span>
           )}
           {deckOpen && <ArtPanel art={art} setArt={setArt} onClose={() => setDeckOpen(false)} />}
