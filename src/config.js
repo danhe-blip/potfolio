@@ -341,8 +341,8 @@ export const ABOUT = {
     {
       id: "experience",
       label: "02 Experience",
-      headline: "Virtue AI — Founding Designer",
-      body: "Apr 2025 — Present\nSole designer. Own brand, product, web, and marketing. Shipped PolicyGuard 0→1 and refactored the VirtueRed interface.\n\n[Dan fills: prior roles, or delete.]",
+      headline: "Founding designer, by way of brand and product.",
+      body: "Founding Designer · Virtue AI\nApr 2025 — Present\nFounding and sole designer at an AI security company, owning product, brand, and web for tools used daily by AI engineers and security teams. Led UX for guardrail, red teaming, and policy configuration, translating complex technical workflows into clear interaction models. Designed PolicyGuard 0→1 from research to launch, refactored the Red Teaming product with engineering, built the company's first design system and brand from scratch, and shipped design directly in the front-end codebase alongside engineers.\n\nDesign Lead · YLEM LLC\nFeb 2024 — Apr 2025\nLed visual and product design across digital experiences and brand execution. Collaborated with clients to define design direction and deliver cohesive user-facing experiences.\n\nUX/UI Design Intern · Mindray\nNov 2022 — Jan 2023\nDesigned ultrasound workstation UX for region-of-interest (ROI) editing and image reordering workflows used in cardiac measurement.\n\nBrand Designer · Zhide Health Consulting\nApr 2019 — Apr 2021\nOwned brand identity and its application across every touchpoint, from wordmark and visual system to sales decks, event collateral, and print production. Built reusable templates and brand guidelines that let non-designers produce on-brand materials independently.",
     },
     {
       id: "capabilities",
