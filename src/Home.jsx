@@ -35,7 +35,7 @@ const loadDeckSeen = () => {
 };
 
 export default function Home({ navigate }) {
-  const [pg, vr, ds, br, web] = WORKS;
+  const [pg, vr, ds, aiw] = WORKS;
   const [art, setArt] = useState(loadArt);
   const [deckOpen, setDeckOpen] = useState(() => window.location.search.includes("deck"));
   const [hovered, setHovered] = useState(null);
@@ -243,10 +243,9 @@ export default function Home({ navigate }) {
         </section>
 
         {workCell(pg, 0, "cell--w2")}
-        {workCell(vr, 1)}
+        {workCell(vr, 1, "cell--w2")}
         {workCell(ds, 2)}
-        {workCell(br, 3)}
-        {workCell(web, 4)}
+        {workCell(aiw, 3)}
       </main>
 
       <footer className="marquee" aria-hidden="true">

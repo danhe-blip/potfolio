@@ -25,7 +25,7 @@ export default function WorkPage({ doc, navigate }) {
   const jump = (id) => refs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   const idx = WORKS.findIndex((w) => w.id === doc.id);
-  const pool = WORKS.filter((w) => !w.confidential && w.id !== doc.id);
+  const pool = WORKS.filter((w) => !w.confidential && !w.hidden && w.id !== doc.id);
   const next = pool.find((w) => WORKS.indexOf(w) > idx) || pool[0] || ABOUT;
 
   return (

@@ -293,6 +293,7 @@ export const WORKS = [
   },
   {
     id: "website",
+    hidden: true,
     confidential: true,
     motif: "flow",
     num: "05",
