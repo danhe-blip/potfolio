@@ -12,6 +12,7 @@ export const SITE = {
   heroTitleB: "and ship them to production.",
   heroBlurb: "Founding designer at Virtue AI. Brand, product, systems, web.",
   artSignature: "Kernel — generative study",
+  artHint: "press [ tune ] to adjust",
 };
 
 export const NOT_FOUND = {
@@ -28,12 +29,12 @@ export const KALEIDO = {
 
 export const ART = {
   defaults: {
-    variant: "fold",
+    variant: "orbit",
     symmetry: 6,
     speed: 2,
     scale: 13,
-    density: -5,
-    palette: "signal",
+    density: 10,
+    palette: "custom",
     customColor: "#C8432A",
     customMode: "multi",
     seed: 0.37,

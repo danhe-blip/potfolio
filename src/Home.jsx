@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { SITE, WORKS, ART } from "./config";
 import Kaleido from "./Kaleido";
 import ArtPanel from "./ArtPanel";
@@ -19,10 +19,18 @@ const mix = (hexA, hexB, k) => {
 
 const loadArt = () => {
   try {
-    const saved = JSON.parse(localStorage.getItem("dh-art-v1"));
+    const saved = JSON.parse(localStorage.getItem("dh-art-v2"));
     return saved ? { ...ART.defaults, ...saved } : ART.defaults;
   } catch {
     return ART.defaults;
+  }
+};
+
+const loadDeckSeen = () => {
+  try {
+    return !!localStorage.getItem("dh-deck-seen");
+  } catch {
+    return false;
   }
 };
 
@@ -31,10 +39,56 @@ export default function Home({ navigate }) {
   const [art, setArt] = useState(loadArt);
   const [deckOpen, setDeckOpen] = useState(() => window.location.search.includes("deck"));
   const [hovered, setHovered] = useState(null);
+  const [deckSeen, setDeckSeen] = useState(loadDeckSeen);
+  const [hintOn, setHintOn] = useState(false);
+  const hintRef = useRef(null);
+  const hintPos = useRef({ x: 0, y: 0, tx: 0, ty: 0, raf: 0 });
+
+  const openDeck = () => {
+    setDeckOpen(true);
+    setDeckSeen(true);
+    try {
+      localStorage.setItem("dh-deck-seen", "1");
+    } catch {}
+  };
+
+  const heroMove = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const p = hintPos.current;
+    p.tx = e.clientX - r.left + 18;
+    p.ty = e.clientY - r.top + 24;
+    if (!hintOn) {
+      p.x = p.tx;
+      p.y = p.ty;
+      setHintOn(true);
+    }
+    if (!p.raf) {
+      const step = () => {
+        p.x += (p.tx - p.x) * 0.16;
+        p.y += (p.ty - p.y) * 0.16;
+        if (hintRef.current) hintRef.current.style.transform = `translate(${p.x}px, ${p.y}px)`;
+        if (Math.abs(p.tx - p.x) + Math.abs(p.ty - p.y) > 0.4) {
+          p.raf = requestAnimationFrame(step);
+        } else {
+          p.raf = 0;
+        }
+      };
+      p.raf = requestAnimationFrame(step);
+    }
+  };
+
+  const heroLeave = () => {
+    const p = hintPos.current;
+    if (p.raf) cancelAnimationFrame(p.raf);
+    p.raf = 0;
+    setHintOn(false);
+  };
+
+  const variantLabel = ART.variants.find((v) => v.id === art.variant)?.label || art.variant;
 
   useEffect(() => {
     try {
-      localStorage.setItem("dh-art-v1", JSON.stringify(art));
+      localStorage.setItem("dh-art-v2", JSON.stringify(art));
     } catch {}
   }, [art]);
 
@@ -146,7 +200,13 @@ export default function Home({ navigate }) {
   return (
     <>
       <main className="board">
-        <section className="cell cell--hero reveal" data-art-host style={{ animationDelay: "0ms" }}>
+        <section
+          className="cell cell--hero reveal"
+          data-art-host
+          style={{ animationDelay: "0ms" }}
+          onMouseMove={deckOpen || deckSeen ? undefined : heroMove}
+          onMouseLeave={deckOpen || deckSeen ? undefined : heroLeave}
+        >
           <div className="hero-art" aria-hidden="true">
             <Kaleido params={heroParams} />
           </div>
@@ -162,13 +222,18 @@ export default function Home({ navigate }) {
               {!deckOpen && (
                 <div className="hero-meta">
                   <span className="art-sig" aria-hidden="true">{SITE.artSignature}</span>
-                  <button className="tune-tab" aria-expanded={false} onClick={() => setDeckOpen(true)}>
+                  <button className="tune-tab" aria-expanded={false} onClick={openDeck}>
                     [ tune ]
                   </button>
                 </div>
               )}
             </div>
           </div>
+          {hintOn && !deckOpen && !deckSeen && (
+            <span className="cursor-hint mono" ref={hintRef} aria-hidden="true">
+              {variantLabel} / sym {art.symmetry} / {Number(art.speed).toFixed(1)}x :: {SITE.artHint}
+            </span>
+          )}
           {deckOpen && <ArtPanel art={art} setArt={setArt} onClose={() => setDeckOpen(false)} />}
         </section>
 
