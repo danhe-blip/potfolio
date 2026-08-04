@@ -442,8 +442,7 @@ img { max-width: 100%; display: block; }
 .doc-tags .t { padding: 0; }
 .doc-title {
   font-family: var(--serif);
-  font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(46px, 7.5vw, 96px);
   line-height: 0.95;
   letter-spacing: -0.02em;
