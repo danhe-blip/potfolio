@@ -69,13 +69,13 @@ export const WORKS = [
     result: "Guard went from an API our engineers hand-held to a product policy owners run end to end. It is now the product Virtue leads with.",
     gate: {
       label: "Locked",
-      headline: "The rest of this case is shared by name.",
-      body: "This case covers work that is still confidential, so the remaining sections open by name. Enter the first name I shared it with.",
-      note: "Haven't spoken yet? Email dhe052@hotmail.com and I'll open it for you.",
-      placeholder: "First name",
+      headline: "The rest of this case opens by name.",
+      body: "The remaining sections cover work that is still confidential. If we've been in touch, enter your first name to open them.",
+      note: "Haven't reached out yet? Email dhe052@hotmail.com and I'll open it for you.",
+      placeholder: "Your first name",
       cta: "Unlock",
       checking: "Checking",
-      denied: "That name isn't on the list.",
+      denied: "I don't have that name yet. Email me and I'll add it.",
       error: "Unlock is unavailable right now. Email dhe052@hotmail.com.",
     },
     sections: [
