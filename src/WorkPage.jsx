@@ -25,7 +25,7 @@ export default function WorkPage({ doc, navigate }) {
   const jump = (id) => refs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   const idx = WORKS.findIndex((w) => w.id === doc.id);
-  const pool = WORKS.filter((w) => !w.wip && w.id !== doc.id);
+  const pool = WORKS.filter((w) => !w.confidential && w.id !== doc.id);
   const next = pool.find((w) => WORKS.indexOf(w) > idx) || pool[0] || ABOUT;
 
   return (
@@ -75,7 +75,7 @@ export default function WorkPage({ doc, navigate }) {
             <h2>{s.headline}</h2>
             <p>{s.body}</p>
             {s.diagram === "composition" && <CompositionDiagram />}
-            {s.link && (s.link.to === "about" || WORKS.some((w) => w.id === s.link.to && !w.wip)) && (
+            {s.link && (s.link.to === "about" || WORKS.some((w) => w.id === s.link.to && !w.confidential)) && (
               <button className="sec-link mono" onClick={() => navigate(s.link.to)}>
                 {s.link.label} <span className="a">→</span>
               </button>

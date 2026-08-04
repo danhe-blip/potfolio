@@ -151,11 +151,11 @@ export default function Home({ navigate }) {
   };
 
   const workCell = (w, i, extra = "") => {
-    if (w.wip) {
+    if (w.confidential) {
       return (
         <div
           key={w.id}
-          className={`cell cell--work cell--wip reveal ${extra}`}
+          className={`cell cell--work cell--confidential reveal ${extra}`}
           data-art-host
           style={{ animationDelay: `${90 + i * 70}ms` }}
           aria-disabled="true"
@@ -167,7 +167,7 @@ export default function Home({ navigate }) {
             <span>{w.num}</span>
             <span className="head-end">
               <span>[{w.type}]</span>
-              <span className="wip-status" aria-label="Case study in progress">WIP</span>
+              <span className="confidential-status" aria-label="Case study available on request">Private</span>
             </span>
           </div>
           <div className="cell-text">

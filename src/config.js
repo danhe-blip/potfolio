@@ -134,7 +134,7 @@ export const WORKS = [
   },
   {
     id: "virtuered",
-    wip: true,
+    confidential: true,
     motif: "clash",
     num: "02",
     title: "VirtueRed",
@@ -180,7 +180,7 @@ export const WORKS = [
   },
   {
     id: "design-system",
-    wip: true,
+    confidential: true,
     motif: "lattice",
     num: "03",
     title: "Design System",
@@ -288,7 +288,7 @@ export const WORKS = [
   },
   {
     id: "website",
-    wip: true,
+    confidential: true,
     motif: "flow",
     num: "05",
     title: "Website",

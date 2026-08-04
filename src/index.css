@@ -154,14 +154,14 @@ img { max-width: 100%; display: block; }
 .cell--work:hover .head { color: var(--mut); }
 .cell--work:hover .tagline { color: var(--mut); }
 
-.cell--wip { cursor: default; }
-.cell--wip:hover { box-shadow: none; }
-.cell--wip .cell-art { opacity: 0.14; }
-.cell--wip:hover .cell-art { opacity: 0.26; }
-.cell--wip .head, .cell--wip .cell-text { opacity: 0.55; transition: opacity 0.3s; }
-.cell--wip:hover .head, .cell--wip:hover .cell-text { opacity: 0.72; }
+.cell--confidential { cursor: default; }
+.cell--confidential:hover { box-shadow: none; }
+.cell--confidential .cell-art { opacity: 0.14; }
+.cell--confidential:hover .cell-art { opacity: 0.26; }
+.cell--confidential .head, .cell--confidential .cell-text { opacity: 0.55; transition: opacity 0.3s; }
+.cell--confidential:hover .head, .cell--confidential:hover .cell-text { opacity: 0.72; }
 .head-end { display: inline-flex; align-items: center; gap: 12px; }
-.wip-status {
+.confidential-status {
   letter-spacing: 0.14em;
   color: rgba(247, 245, 240, 0.34);
   border: 1px solid rgba(247, 245, 240, 0.16);

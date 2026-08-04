@@ -40,7 +40,7 @@ export default function App() {
     window.location.hash = target;
   };
 
-  const work = WORKS.find((w) => w.id === route && !w.wip);
+  const work = WORKS.find((w) => w.id === route && !w.confidential);
   const doc = route === "about" ? ABOUT : work;
 
   return (
