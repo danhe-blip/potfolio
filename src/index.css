@@ -130,20 +130,18 @@ img { max-width: 100%; display: block; }
   transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 .cell .arrow {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  font-size: 18px;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.55em;
   opacity: 0;
-  transform: translate(-8px, 8px);
-  transition: 0.25s;
-  z-index: 1;
+  transform: translateX(-6px);
+  transition: opacity 0.25s, transform 0.25s;
 }
 .cell.link { cursor: pointer; }
 .cell.link:hover::before, .cell.link:focus-visible::before { transform: scaleY(1); }
 .cell.link:hover .head, .cell.link:hover .tagline { color: rgba(247, 245, 240, 0.8); }
 .cell.link:hover .title { transform: translateX(8px); }
-.cell.link:hover .arrow { opacity: 1; transform: translate(0, 0); }
+.cell.link:hover .arrow { opacity: 1; transform: translateX(0); }
 .cell.link:focus-visible { outline: 1px solid var(--red); outline-offset: -1px; }
 
 .cell > .cell-art {
