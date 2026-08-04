@@ -64,7 +64,7 @@ export const WORKS = [
     type: "Product",
     tagline: "The guardrail, rebuilt for the people who own the policy",
     sub: "Virtue's Guard shipped as an API that took ML expertise to operate. I reframed it into a product a policy owner at a bank or hospital composes, tests, and ships without an ML engineer in the loop.",
-    tags: ["0→1", "AI safety", "Enterprise", "2026"],
+    tags: ["0→1", "AI safety", "Enterprise"],
     result: "Guard went from an API that needed an ML team to a product policy owners run end to end. It is now the product Virtue leads with.",
     sections: [
       {
@@ -141,7 +141,7 @@ export const WORKS = [
     type: "Product",
     tagline: "The AI red-teaming platform, refactored",
     sub: "Rebuilding an engineer-built adversarial testing tool into an interface security researchers can move fast in.",
-    tags: ["Refactor", "AI safety", "Systems", "2025"],
+    tags: ["Refactor", "AI safety", "Systems"],
     result: "[Dan fills: one-line win]",
     sections: [
       {
@@ -187,7 +187,7 @@ export const WORKS = [
     type: "System",
     tagline: "One language across every product",
     sub: "Tokens, components, and rules that let one designer keep two AI products — and everything around them — coherent.",
-    tags: ["Systems", "Tokens", "Components", "2025"],
+    tags: ["Systems", "Tokens", "Components"],
     result: "[Dan fills: one-line win — e.g. Two products, one system, zero drift]",
     sections: [
       {
@@ -232,7 +232,7 @@ export const WORKS = [
     type: "Process",
     tagline: "Zero Figma. This site, designed in the medium by directing agents",
     sub: "No artboards, no wireframes, no handoff. I designed The Index directly in code by directing AI agents, with taste and facts governed by rules the agents must obey. Figma appeared only at the end, generated from the code.",
-    tags: ["0 Figma", "AI-native", "Solo", "2026"],
+    tags: ["0 Figma", "AI-native", "Solo"],
     result: "A designed site with no design file. The workflow is the deliverable: AI treated as a material, its failure modes understood and designed around.",
     sections: [
       {
@@ -297,7 +297,7 @@ export const WORKS = [
     type: "Web",
     tagline: "virtueai.com — story, system, ship",
     sub: "The marketing site: explaining hard AI-safety products clearly, designed and shipped hands-on.",
-    tags: ["Web", "Marketing", "Copy", "2025"],
+    tags: ["Web", "Marketing", "Copy"],
     result: "[Dan fills: one-line win]",
     sections: [
       {
