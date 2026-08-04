@@ -10,7 +10,7 @@
 - Current: Virtue AI, Founding Designer (Apr 2025–present)
 
 ## Portfolio purpose
-Targeting together.ai-type AI startups — technically sophisticated, design-forward tech-tool companies that value taste, execution, and shipping. NOT enterprise-B2B hiring managers.
+Technically sophisticated, design-forward tech-tool companies that value taste, execution, and shipping.
 
 Three strengths to highlight in every major decision:
 1. AI-native product experience — shipped real AI products (PolicyGuard, VirtueRed)
@@ -28,7 +28,7 @@ References (approved):
 - The kaleidoscope "extension://generative-art" caption is a kept artifact from the earlier desktop concept
 
 ## Design system (locked)
-- Colors: ink #111111 (bg) / paper #F7F5F0 (fg) / red #C8432A (only accent). CSS vars in src/index.css.
+- Colors: ink #111111 (bg) / paper #F7F5F0 (fg). CSS vars in src/index.css.
 - Type: Fraunces italic 300 (editorial display — doc titles, section headlines, hero em, NEXT links) · Hanken Grotesk (titles, body) · IBM Plex Mono (labels, nav, tags, ticker — always uppercase + letterspaced)
 - Sharp corners everywhere. Zero border-radius. Hairline borders (--line) as grid.
 - Bracket tags like [PRODUCT], not pills.
