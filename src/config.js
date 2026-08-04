@@ -239,7 +239,7 @@ export const WORKS = [
         id: "context",
         label: "01 Context",
         headline: "The site you are reading was never mocked up.",
-        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. No artboard, no wireframe. The concept references were words: Dropbox's brand-guidelines grid, the reading pages of Raw Materials, a generative ASCII hero. From there it went straight to running code, and the first time I saw the design, it was already real, in a browser.",
+        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. It started the ordinary way, with a moodboard: Dropbox's brand-guidelines grid, the reading pages of Raw Materials, a generative ASCII hero. What never happened is what usually comes next. No artboard, no wireframe, no mockup. Those references went straight to the agents, and the first time I saw the design, it was already real, in a browser.",
       },
       {
         id: "focus",
