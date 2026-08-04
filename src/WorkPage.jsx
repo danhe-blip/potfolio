@@ -75,7 +75,7 @@ export default function WorkPage({ doc, navigate }) {
             <h2>{s.headline}</h2>
             <p>{s.body}</p>
             {s.diagram === "composition" && <CompositionDiagram />}
-            {s.link && (
+            {s.link && (s.link.to === "about" || WORKS.some((w) => w.id === s.link.to && !w.wip)) && (
               <button className="sec-link mono" onClick={() => navigate(s.link.to)}>
                 {s.link.label} <span className="a">→</span>
               </button>

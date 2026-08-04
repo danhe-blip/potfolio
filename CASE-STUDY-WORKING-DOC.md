@@ -194,6 +194,16 @@ Q3-original (which judgment to defend) is answered: code-first, `packages/shared
 7. Outcome/inheritance signals: faster page builds (roughly how much), engineers reaching for shared components unprompted, visual convergence across the two products, where a second designer would start reading the system.
 8. A "system itself" screenshot (product shots prove usage, not the system): shared-ui directory tree, token file code, Storybook, or a component's variant code. Which can she capture?
 
+## AI Workflow — DONE (Aug 2026, replaced Branding as cell 04)
+
+The story of building this site itself: zero Figma, designed in the medium by directing AI agents. Spine: 01 never mocked up / 02 browser is the canvas, language is the design tool / 03 vibe coding's three failure modes (forgets, inflates, defaults to average) as the brief / 04 a mechanism per failure mode (rules file as memory, placeholders as fact guardrail, config-vs-components as blast radius, screenshot verification, model choice per task, option cards not open questions) plus the tension arc (agents drift grand in copy, precision became a rule, cost paid on purpose) / 05 site live plus the reversal: tokens pushed INTO Figma via MCP with var() dev syntax, Figma documents the system / 06 what was hers: taste, rules, refusals / 07 links to design-system.
+
+Decisions: repo stays private, so no "inspect the repo" claims in copy. No chat-UI screenshots yet (fig placeholders at 03 CLAUDE.md excerpt and 05 Figma variables; Dan captures both). Legacy desktop-OS screenshots are lost; the before/after concept image was dropped. Real images wired: aiw-verify-desktop / aiw-verify-mobile (actual agent verification renders from the build). WorkPage now hides sec-link buttons whose target case is still wip, which also fixes PolicyGuard's design-system link 404.
+
+## Branding — archived (was cell 04, replaced by AI Workflow)
+
+Restore material if the case ever comes back: id branding, motif mark, type Brand, tagline "Identity for an AI-safety company", sub "The visual voice of Virtue AI, credible to enterprises, sharp enough for researchers", tags Identity / Voice / Collateral / 2025. Sections were Context ("A research-grade company that looked like a preprint") / The Gap / The Fix / What Shipped / Outcome, all bodies `[Dan fills]` placeholders. No images were wired.
+
 ## Other cases — still `[Dan fills]`
 
-`virtuered`, `branding`, `website` in config.js are untouched placeholders. Do them after design-system, same framework, same questions-first process.
+`virtuered` and `website` in config.js are untouched placeholders. Do them after design-system, same framework, same questions-first process.
