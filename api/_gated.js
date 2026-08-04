@@ -90,7 +90,7 @@ export const GATED = {
         body: "The distance between stock and ours is the design work. Between the base and Virtue V0 sit the tokens, color, type, spacing, and radius mapped to the brand, and above them the tiers: restyled primitives, composites assembled from them, and the domain layer no library could know, cards for runs and policies, query tables, session traces. Prioritization was mechanical, not aesthetic: a component earned a slot by how often it recurred and how much engineering it kept costing.",
         diagram: "layers",
         imgs: [
-          { src: "/work/ds-shadcn-to-v0.png", cap: "Stock shadcn on the left, Virtue V0 run cards on the right" },
+          { src: "/work/ds-shadcn-to-v0.jpg", cap: "Stock shadcn on the left, Virtue V0 run cards on the right" },
         ],
       },
       {
@@ -99,7 +99,7 @@ export const GATED = {
         headline: "The system grew inside PolicyGuard, not beside it.",
         body: "As PolicyGuard kicked off, our first dedicated front-end engineer joined, and the system stopped being mine alone. We evolved it inside real product work: components mapped to code in the shared package, tokens tuned as screens shipped, parts promoted into the system only after proving themselves in the product. The VirtueRed refactor then hardened the same parts against a second product. A system that grows through use stays honest. One built in isolation is a bet nobody validated.",
         imgs: [
-          { src: "/work/ds-two-products.png", cap: "VirtueRed and VirtueGuard, one system, two products" },
+          { src: "/work/ds-two-products.jpg", cap: "VirtueRed and VirtueGuard, one system, two products" },
         ],
       },
       {
@@ -108,7 +108,7 @@ export const GATED = {
         headline: "Storybook became the source of truth. Figma became the record.",
         body: "The system's center of gravity moved as it matured. Components lived in the shared package with every state documented in Storybook, and that became the single source of truth: when Storybook and anything else disagreed, Storybook won. Then, together with our front-end engineer, I pushed the system back into Figma, generated from what had actually shipped. The file everyone expects to be the origin is the archive: a versioned record of the system, not its master. Design tools document the truth. Code is where it lives.",
         imgs: [
-          { src: "/work/ds-figma-docs.png", cap: "The system pushed back into Figma: documentation of a version, generated from code" },
+          { src: "/work/ds-figma-docs.jpg", cap: "The system pushed back into Figma: documentation of a version, generated from code" },
         ],
       },
       {
