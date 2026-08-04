@@ -54,6 +54,8 @@ export default function WorkPage({ doc, navigate }) {
           <figure className="portrait">
             {doc.photo ? (
               <img src={doc.photo} alt={doc.title} />
+            ) : doc.portraitAscii ? (
+              <pre role="img" aria-label={doc.title}>{doc.portraitAscii}</pre>
             ) : (
               <span>[ drop portrait → /public/portrait.jpg, set ABOUT.photo ]</span>
             )}

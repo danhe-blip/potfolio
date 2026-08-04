@@ -1,3 +1,5 @@
+import PORTRAIT_ASCII from "./portrait.txt?raw";
+
 export const SITE = {
   name: "Dan He",
   role: "Founding Designer",
@@ -330,19 +332,20 @@ export const ABOUT = {
   sub: "San Francisco Bay Area. Currently the founding designer at Virtue AI.",
   tags: ["She/her", "SF Bay Area", "Open to work"],
   photo: "",
+  portraitAscii: PORTRAIT_ASCII,
   result: null,
   sections: [
     {
       id: "bio",
       label: "01 Bio",
       headline: "One designer, every surface.",
-      body: "I'm the founding designer at Virtue AI, an AI-safety company. I own product design across PolicyGuard and VirtueRed, plus the design system, brand, and website. I'm technically fluent — not a strong coder, but I understand frontend constraints and work in the codebase alongside engineers, using AI to close the gap between design intent and what actually ships.",
+      body: "Founding designer at Virtue AI, an AI security company. The role spans product design across PolicyGuard and VirtueRed, plus the design system, brand, and website. Not a strong coder, but close enough to the code to work in it: shipping styling, copy, and interaction details alongside engineers, using AI to close the gap between design intent and what actually ships.",
     },
     {
       id: "experience",
       label: "02 Experience",
       headline: "Founding designer, by way of brand and product.",
-      body: "Founding Designer · Virtue AI\nApr 2025 — Present\nFounding and sole designer at an AI security company, owning product, brand, and web for tools used daily by AI engineers and security teams. Led UX for guardrail, red teaming, and policy configuration, translating complex technical workflows into clear interaction models. Designed PolicyGuard 0→1 from research to launch, refactored the Red Teaming product with engineering, built the company's first design system and brand from scratch, and shipped design directly in the front-end codebase alongside engineers.\n\nDesign Lead · YLEM LLC\nFeb 2024 — Apr 2025\nLed visual and product design across digital experiences and brand execution. Collaborated with clients to define design direction and deliver cohesive user-facing experiences.\n\nUX/UI Design Intern · Mindray\nNov 2022 — Jan 2023\nDesigned ultrasound workstation UX for region-of-interest (ROI) editing and image reordering workflows used in cardiac measurement.\n\nBrand Designer · Zhide Health Consulting\nApr 2019 — Apr 2021\nOwned brand identity and its application across every touchpoint, from wordmark and visual system to sales decks, event collateral, and print production. Built reusable templates and brand guidelines that let non-designers produce on-brand materials independently.",
+      body: "Founding Designer · Virtue AI\nApr 2025 – Present\nFounding and sole designer at an AI security company, owning product, brand, and web for tools used daily by AI engineers and security teams. Led UX for guardrail, red teaming, and policy configuration, translating complex technical workflows into clear interaction models. Designed PolicyGuard 0→1 from research to launch, refactored the Red Teaming product with engineering, built the company's first design system and brand from scratch, and shipped design directly in the front-end codebase alongside engineers.\n\nDesign Lead · YLEM LLC\nFeb 2024 – Apr 2025\nLed visual and product design across digital experiences and brand execution. Collaborated with clients to define design direction and deliver cohesive user-facing experiences.\n\nUX/UI Design Intern · Mindray\nNov 2022 – Jan 2023\nDesigned ultrasound workstation UX for region-of-interest (ROI) editing and image reordering workflows used in cardiac measurement.\n\nBrand Designer · Zhide Health Consulting\nApr 2019 – Apr 2021\nOwned brand identity and its application across every touchpoint, from wordmark and visual system to sales decks, event collateral, and print production. Built reusable templates and brand guidelines that let non-designers produce on-brand materials independently.",
     },
     {
       id: "capabilities",
@@ -354,7 +357,7 @@ export const ABOUT = {
       id: "contact",
       label: "04 Contact",
       headline: "Say hi.",
-      body: "dhe052@hotmail.com — or find me on LinkedIn. Based in the SF Bay Area, working with teams building serious AI tools.",
+      body: "dhe052@hotmail.com, or find me on LinkedIn. Based in the SF Bay Area, working with teams building serious AI tools.",
     },
   ],
 };

@@ -454,6 +454,17 @@ img { max-width: 100%; display: block; }
   transition: filter 0.4s;
 }
 .portrait img:hover { filter: grayscale(0) contrast(1); }
+.portrait:has(pre) { border: 1px solid var(--line); padding: 0; container-type: inline-size; }
+.portrait pre {
+  font-family: var(--mono);
+  font-size: calc(100cqw / 43.2);
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(247, 245, 240, 0.85);
+  transition: color 0.4s;
+}
+.portrait pre:hover { color: var(--red); }
 
 .nf {
   flex: 1;
