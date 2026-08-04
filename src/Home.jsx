@@ -26,20 +26,12 @@ const loadArt = () => {
   }
 };
 
-const loadDeckSeen = () => {
-  try {
-    return !!localStorage.getItem("dh-deck-seen");
-  } catch {
-    return false;
-  }
-};
-
 export default function Home({ navigate }) {
   const [pg, vr, ds, aiw] = WORKS;
   const [art, setArt] = useState(loadArt);
   const [deckOpen, setDeckOpen] = useState(() => window.location.search.includes("deck"));
   const [hovered, setHovered] = useState(null);
-  const [deckSeen, setDeckSeen] = useState(loadDeckSeen);
+  const [deckSeen, setDeckSeen] = useState(false);
   const [hintOn, setHintOn] = useState(false);
   const hintRef = useRef(null);
   const hintPos = useRef({ x: 0, y: 0, tx: 0, ty: 0, raf: 0 });
@@ -47,9 +39,6 @@ export default function Home({ navigate }) {
   const openDeck = () => {
     setDeckOpen(true);
     setDeckSeen(true);
-    try {
-      localStorage.setItem("dh-deck-seen", "1");
-    } catch {}
   };
 
   const heroMove = (e) => {
