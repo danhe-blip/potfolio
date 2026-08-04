@@ -71,7 +71,7 @@ export const WORKS = [
         id: "context",
         label: "01 Context",
         headline: "Guard worked as an API. Every deployment still ran through us.",
-        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and enterprises were already adopting it. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The demand was there. The form wasn't. Demand proves a need is real, not that the product is in the right shape.",
+        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and it quietly became our most profitable line. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The demand was there. The form wasn't. A profitable product proves demand, not that it's in the right shape.",
         imgs: [
           { src: "/work/pg-dashboard-light.png", cap: "Dashboard, production scale" },
           { src: "/work/pg-dashboard-dark.png", cap: "Same dashboard, dark theme" },
@@ -239,7 +239,7 @@ export const WORKS = [
         id: "context",
         label: "01 Context",
         headline: "The site you are reading was never mocked up.",
-        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. It started the ordinary way, with a moodboard: Dropbox's brand-guidelines grid, the reading pages of Raw Materials, a generative ASCII hero. What never happened is what usually comes next. No artboard, no wireframe, no mockup. Those references went straight to the agents, and the first time I saw the design, it was already real, in a browser.",
+        body: "This portfolio had to prove a claim no static image can: that I work in the codebase and ship. So the build became the case. It started the ordinary way, with a moodboard: [Dropbox's brand-guidelines grid](https://brand.dropbox.com), the reading pages of [Raw Materials](https://www.therawmaterials.com), a generative ASCII hero. What never happened is what usually comes next. No artboard, no wireframe, no mockup. Those references went straight to the agents, and the first time I saw the design, it was already real, in a browser.",
       },
       {
         id: "focus",

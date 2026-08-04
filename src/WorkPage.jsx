@@ -3,6 +3,25 @@ import { WORKS, ABOUT } from "./config";
 import ShotGrid from "./ShotGrid";
 import CompositionDiagram from "./CompositionDiagram";
 
+const renderBody = (text) => {
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+  const parts = [];
+  let last = 0;
+  let m;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push(
+      <a key={m.index} href={m[2]} target="_blank" rel="noreferrer">
+        {m[1]}
+      </a>
+    );
+    last = m.index + m[0].length;
+  }
+  if (last === 0) return text;
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+};
+
 export default function WorkPage({ doc, navigate }) {
   const [active, setActive] = useState(doc.sections[0]?.id);
   const refs = useRef({});
@@ -73,7 +92,7 @@ export default function WorkPage({ doc, navigate }) {
           <section key={s.id} className="sec" ref={(el) => (refs.current[s.id] = el)}>
             <div className="label">{s.label}</div>
             <h2>{s.headline}</h2>
-            <p>{s.body}</p>
+            <p>{renderBody(s.body)}</p>
             {s.diagram === "composition" && <CompositionDiagram />}
             {s.link && (s.link.to === "about" || WORKS.some((w) => w.id === s.link.to && !w.confidential)) && (
               <button className="sec-link mono" onClick={() => navigate(s.link.to)}>

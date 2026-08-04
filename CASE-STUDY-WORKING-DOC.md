@@ -60,10 +60,10 @@ Images live in `public/work/`, referenced as `/work/<name>.png`. Original screen
 7-beat structure written (Context / Focus / Problem & Opportunity / The Build / Outcome / Contribution / Next). Key content:
 
 - **Bet:** "Compose a guard, not configure a model." The reframe: Guard worked as an API any engineer could call, but composing and tuning real enforcement leaned on Virtue's engineers, and the policy owner could not touch it at all. Widening who can wield a powerful tool drives more business value than deepening it for the few.
-- **RETRACTED (Aug 2026, per Dan):** never write "most profitable" (not a fact) or "only ML engineers could use" (false: any engineer could call the API). The true friction axis: deployments hand-held by Virtue engineers, policy owners locked out.
+- **FACT RULES (Aug 2026, per Dan):** "most profitable line" IS a confirmed fact; use it exactly once, in Context. "Only ML engineers could use" is FALSE and permanently banned: any engineer could call the API. The true friction axis: composing and tuning real enforcement leaned on Virtue's engineers, and policy owners were locked out entirely.
 - **The tension (in The Build):** her instinct was one-screen-one-job (compose, test later); the PO argued that in an AI-native tool, authoring and evaluation are one loop, not two steps, because a policy's quality is unknowable until run on real input. She agreed, accepted a busier interface, and paid it down with progressive disclosure (playground disabled until the object exists).
 - **Contribution:** the composition model (rule → policy group → guard, "touch the guard, not the policy"); the card component reused across policy groups, datasets, evaluations, and the dashboard/monitoring query tables; prototyping in code (branch off PO's branch, two live links, design to deployment in 2 days / 3 rounds).
-- **Facts:** launched Jan 2026, flagship. Enterprise customers (verbal only, NDA): ServiceNow, T-Mobile, AllianceBernstein, Intel, Samsung. Validated via internal testing + customer PMs. Onboarding: docs failed for rotating customer teams, interactive demos fixed it.
+- **Facts:** launched Jan 2026, flagship, most profitable line. Enterprise customers (verbal only, NDA): ServiceNow, T-Mobile, AllianceBernstein, Intel, Samsung. Validated via internal testing + customer PMs. Onboarding: docs failed for rotating customer teams, interactive demos fixed it.
 - **Images wired (15):** dashboard light+dark (Context); old TextGuard config as the "before" (Problem); policy groups, new-policy menu, editor+playground, validation states (The Build); Policy Lab step1/step2, optimization history, optimization diff, queries, session trace x2 (Outcome); dashboard query table (Contribution).
 - **Open polish:** Outcome has 7 images, possibly trim. Strongest to keep: optimization diff (measured F1 gain + diff-to-promote) and multiturn session trace.
 
@@ -85,7 +85,7 @@ Verbatim snapshot of the shipped copy in `src/config.js`. Restore from here if a
 
 **01 Context — "Guard worked as an API. Every deployment still ran through us."**
 
-When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and enterprises were already adopting it. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The demand was there. The form wasn't. Demand proves a need is real, not that the product is in the right shape.
+When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and it quietly became our most profitable line. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The demand was there. The form wasn't. A profitable product proves demand, not that it's in the right shape.
 
 *Images:* pg-dashboard-light ("Dashboard, production scale"), pg-dashboard-dark ("Same dashboard, dark theme")
 
