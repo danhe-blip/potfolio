@@ -136,10 +136,7 @@ export default function Home({ navigate }) {
           <span>[{w.type}]</span>
         </div>
         <div className="cell-text">
-          <div className="title">
-            {w.title}
-            <span className="arrow" aria-hidden="true">↗</span>
-          </div>
+          <div className="title">{w.title}</div>
           <div className="tagline">{w.tagline}</div>
         </div>
       </button>

@@ -129,21 +129,10 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.02em;
   transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.cell .arrow {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 1;
-  margin-left: 10px;
-  font-size: 0.55em;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.25s, transform 0.25s;
-}
 .cell.link { cursor: pointer; }
 .cell.link:hover::before, .cell.link:focus-visible::before { transform: scaleY(1); }
 .cell.link:hover .head, .cell.link:hover .tagline { color: rgba(247, 245, 240, 0.8); }
 .cell.link:hover .title { transform: translateX(8px); }
-.cell.link:hover .arrow { opacity: 1; transform: translateX(0); }
 .cell.link:focus-visible { outline: 1px solid var(--red); outline-offset: -1px; }
 
 .cell > .cell-art {
@@ -183,7 +172,6 @@ img { max-width: 100%; display: block; }
 .cell--paper:hover { color: var(--ink); }
 .cell--paper:hover .head, .cell--paper:hover .tagline { color: rgba(17, 17, 17, 0.65); }
 .cell--paper:hover .contact-line { color: var(--ink); }
-.cell--paper .arrow { color: var(--ink); }
 
 .cell--w2 { grid-column: span 2; }
 
@@ -716,10 +704,6 @@ img { max-width: 100%; display: block; }
 .next-link:hover { color: var(--red); }
 .next-link .a { font-size: 0.7em; transition: transform 0.25s; }
 .next-link:hover .a { transform: translateX(10px); }
-
-@media (hover: none) {
-  .cell .arrow { opacity: 1; transform: none; }
-}
 
 @media (max-width: 900px) {
   :root { --bar-h: 44px; }
