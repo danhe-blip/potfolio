@@ -34,6 +34,16 @@ References (approved):
 - Bracket tags like [PRODUCT], not pills.
 - Motion: cell hover floods red bottom-up (paper flood on meta cells); page transitions glitch-in 260ms; staggered rise reveal on the board; marquee ticker; blinking status dot. Scanline overlay at 2% on body.
 
+## Contrast (measured against #111111)
+Target is WCAG AA: 4.5:1 for text under 24px (nothing on this site qualifies as "large text").
+
+- `--paper` 17.3:1 · `--mut` (0.52) 5.30:1 — both safe for any text.
+- `--mut-2` (0.32) **2.74:1 — fails AA.** Decorative only: rules, dividers, icon strokes. Never for text a visitor needs to read. Currently misused on `.topbar .meta`, inactive `.project-rail` buttons, `.rail-foot`, and `.gate-input::placeholder`. Raising it to 0.47 would reach 4.54:1.
+- `--red` as text **3.86:1 — fails AA** (3.59:1 when set on a `--red-dim` background, e.g. active rail items). Red is safe for borders, backgrounds, and graphics; it fails for the 10.5–11px labels it is currently used on (`.sec .label`, `.result .label`, `.sec-link`, active rail items, and `.gate-msg .bad` error text).
+- Fix for red text, if taken: add a text-only `--red-text: #DC4A2E` (same hue, 4.55:1) and leave the locked `--red` untouched.
+
+Never trade the concept for compliance, but never let an error message or a nav link fail either. When adding a muted colour, compute the ratio before shipping it.
+
 ## Tech stack
 Vite + React 19, plain JSX. Layout/design in src/index.css (plain CSS, classes); inline styles only for one-offs. No Tailwind, no CSS-in-JS, no router lib (hash routing in App.jsx). Don't suggest switching frameworks.
 
