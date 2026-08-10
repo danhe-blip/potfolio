@@ -442,7 +442,7 @@ img { max-width: 100%; display: block; }
 }
 .glitch-in { animation: glitch-in 260ms steps(2, end); }
 
-.doc { display: grid; grid-template-columns: 264px 1fr; align-items: start; }
+.doc { display: grid; grid-template-columns: 264px minmax(0, 880px) minmax(0, 264px); justify-content: center; align-items: start; }
 .rail {
   position: sticky;
   top: var(--bar-h);
