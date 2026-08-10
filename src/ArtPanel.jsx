@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ART, SITE } from "./config";
+import { frameText } from "./Kaleido";
 
 export default function ArtPanel({ art, setArt, onClose }) {
   const [copied, setCopied] = useState(false);
@@ -20,9 +21,13 @@ export default function ArtPanel({ art, setArt, onClose }) {
   };
 
   const copyTxt = async () => {
-    const pre = document.querySelector(".hero-art .kaleido");
-    if (!pre) return;
-    const txt = `${pre.innerText}\n\n${SITE.artSignature} · ${window.location.origin}`;
+    const frame = frameText(
+      { ...art, density: art.density / 100 },
+      64,
+      32,
+      performance.now() / 1000
+    );
+    const txt = `${frame}\n\n${SITE.artSignature} · ${window.location.origin}`;
     let ok = false;
     try {
       await navigator.clipboard.writeText(txt);

@@ -21,7 +21,7 @@ Not copied, written fresh in the new repo: `App.jsx` (fullscreen kaleido + deck 
 
 1. **`Kaleido.jsx` imports `KALEIDO` from `./config`** (ramp + fallback grid dims). Fix: move into `presets.js`, or better, accept `ramp` via props with the preset as default so forks can theme it.
 2. **`ArtPanel.jsx` imports `SITE`** for `SITE.artSignature` inside `copyTxt`. Fix: `SIGNATURE` constant in `presets.js`, passed as prop or imported directly.
-3. **`ArtPanel.copyTxt` queries the DOM globally** (`document.querySelector(".hero-art .kaleido")` after the bug fix). Portfolio-specific selector. Fix in the new repo: the app root holds a ref to the single Kaleido `<pre>` and passes a `getText()` callback into ArtPanel. No global queries.
+3. **Export is decoupled from display** (already done in the portfolio): `copyTxt` no longer reads the DOM at all. `Kaleido.jsx` exports a pure `frameText(params, W, H, elapsed)` that recomputes a frame at a fixed 64×32 grid, so the copied shape survives pasting regardless of how wide the on-screen render was. The new repo keeps this pattern; never export the display grid.
 4. **Pointer ripple host**: `pre.closest("[data-art-host]")` with `parentElement` fallback. Keep the attribute convention, document it in the README; the fallback already makes it safe standalone.
 5. **State persistence lives in `Home.jsx`** (`loadArt`, localStorage key `dh-art-v2`, accent side effects writing `--red`/`--mark`/`--on-accent` onto `document.documentElement`). The new `App.jsx` reimplements this pattern with its own key (`kernel-art-v1`). The accent-propagation effect is worth keeping — it is the "tune the color, the whole page follows" trick — but scope it to the standalone page's own vars.
 6. **Portfolio-only behaviors not to copy**: cursor hint, deck-seen gating, `?deck=1` param, `IDLE_COLORS`/`iconParams` (work-cell thumbnails), glitch page transitions.
@@ -42,7 +42,7 @@ Port of the Python portrait pipeline (PIL) to canvas. All client-side.
   5. Char: `RAMP[min(floor(v * RAMP.length), RAMP.length - 1)]` with the site ramp `" .:-=+*o#%@"`. Bright = dense, correct for paper-on-ink.
 - **Color**: reuse `colorFor(idx / (len-1), colors)` from the engine so imported images respect the active palette, including custom mono/multi and spectrum.
 - **Render**: new `mode: "image"` in app state. When active, the animation loop is paused and a static `AsciiImage` render replaces the field output in the same `<pre>` (share the run-length span builder — extract it from `renderFrame` into a small shared helper rather than duplicating).
-- **Export**: same `[ copy .txt ]` (with the copied-state feedback just added), plus `[ download .txt ]`, plus `[ export .png ]` drawing the grid to a canvas (mono font, ink background, palette colors) — the JS equivalent of the Python preview renderer.
+- **Export**: same `[ copy .txt ]` (with the copied-state feedback just added), plus `[ download .txt ]`, plus `[ export .png ]` drawing the grid to a canvas (mono font, ink background, palette colors) — the JS equivalent of the Python preview renderer. All text exports go through `frameText` at a user-pickable fixed width (40 / 64 / 80 cols, default 64), never the display grid, so pasted art keeps its shape. Add a "wrap in ``` fences" toggle so pastes into Markdown contexts (Slack, GitHub) stay monospace automatically.
 - **Reset**: `[ clear image ]` returns to generative mode.
 
 Estimated scope: `imageAscii.js` ~150 lines, deck additions ~40, App state ~30.

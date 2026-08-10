@@ -42,6 +42,25 @@ const FIELDS = {
     2 * Math.sin(x * 0.55 - t * p.speed * 1.6 + Math.sin(y * 0.5) * 1.4) + Math.sin(y * 0.9 + Math.sin(x * 0.2 - t * p.speed) * 1.2),
 };
 
+export const frameText = (p, W, H, elapsed) => {
+  const { ramp } = KALEIDO;
+  const len = ramp.length;
+  const g = { cx: W / 2, cy: H / 2 };
+  const t = p.seed * Math.PI * 2 + elapsed;
+  const field = FIELDS[p.variant] || FIELDS.fold;
+  const rows = [];
+  for (let y = 0; y < H; y++) {
+    let line = "";
+    for (let x = 0; x < W; x++) {
+      let n = (field(x, y, t, p, g) + 3) / 6 + p.density;
+      n = Math.max(0, Math.min(1, n));
+      line += ramp[Math.round(n * (len - 1))];
+    }
+    rows.push(line.replace(/ +$/, ""));
+  }
+  return rows.join("\n");
+};
+
 const colorFor = (t, colors) => {
   if (colors === "spectrum") {
     return `hsl(${Math.round(280 - t * 300)},68%,${Math.round(38 + t * 30)}%)`;
