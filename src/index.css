@@ -433,13 +433,54 @@ img { max-width: 100%; display: block; }
 }
 .glitch-in { animation: glitch-in 260ms steps(2, end); }
 
-.doc { display: grid; grid-template-columns: 264px minmax(0, 880px) minmax(0, 264px); justify-content: center; align-items: start; }
+.doc { display: grid; grid-template-columns: 52px 264px minmax(0, 880px) minmax(0, 264px); justify-content: center; align-items: start; }
+.doc--no-project-rail { grid-template-columns: 264px minmax(0, 880px) minmax(0, 264px); }
+.doc--no-project-rail .rail { border-left: 1px solid var(--line); }
+.project-rail {
+  position: sticky;
+  top: var(--bar-h);
+  height: calc(100dvh - var(--bar-h));
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.project-rail button {
+  flex: 1;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mut-2);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.project-rail button:last-of-type { border-bottom: 0; }
+.project-rail button:hover { color: var(--paper); }
+.project-rail button.on { color: var(--red); border-left-color: var(--red); background: var(--red-dim); }
+.project-rail-foot {
+  padding: 16px 0;
+  color: var(--mut-2);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .rail {
   position: sticky;
   top: var(--bar-h);
   height: calc(100dvh - var(--bar-h));
   border-right: 1px solid var(--line);
-  border-left: 1px solid var(--line);
   padding: 28px 16px;
   display: flex;
   flex-direction: column;
@@ -888,6 +929,7 @@ img { max-width: 100%; display: block; }
   .deck-ctl { min-width: 100%; }
   .cell .title { font-size: 24px; }
   .doc { grid-template-columns: minmax(0, 1fr); }
+  .project-rail { display: none; }
   .rail {
     position: sticky;
     top: var(--bar-h);

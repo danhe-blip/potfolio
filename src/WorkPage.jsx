@@ -76,9 +76,21 @@ export default function WorkPage({ doc, navigate }) {
   const idx = WORKS.findIndex((w) => w.id === doc.id);
   const pool = WORKS.filter((w) => !w.confidential && !w.hidden && w.id !== doc.id);
   const next = pool.find((w) => WORKS.indexOf(w) > idx) || pool[0] || ABOUT;
+  const projects = WORKS.filter((w) => !w.confidential && !w.hidden);
 
   return (
-    <div className="doc">
+    <div className={doc.id === ABOUT.id ? "doc doc--no-project-rail" : "doc"}>
+      {doc.id !== ABOUT.id && (
+        <aside className="project-rail">
+          {projects.map((w) => (
+            <button key={w.id} className={doc.id === w.id ? "on" : ""} onClick={() => navigate(w.id)}>
+              {w.title}
+            </button>
+          ))}
+          <div className="project-rail-foot mono">Project</div>
+        </aside>
+      )}
+
       <aside className="rail">
         {sections.map((s) => (
           <button key={s.id} className={active === s.id ? "on" : ""} onClick={() => jump(s.id)}>
