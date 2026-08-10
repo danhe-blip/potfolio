@@ -440,8 +440,8 @@ img { max-width: 100%; display: block; }
 }
 .glitch-in { animation: glitch-in 260ms steps(2, end); }
 
-.doc { display: grid; grid-template-columns: 52px 264px minmax(0, 880px) minmax(0, 264px); justify-content: center; align-items: start; }
-.doc--no-project-rail { grid-template-columns: 264px minmax(0, 880px) minmax(0, 264px); }
+.doc { display: grid; grid-template-columns: 52px 264px minmax(0, 880px) minmax(0, 1fr); justify-content: start; align-items: start; }
+.doc--no-project-rail { grid-template-columns: 264px minmax(0, 880px) minmax(0, 1fr); }
 .doc--no-project-rail .rail { border-left: 1px solid var(--line); }
 .project-rail {
   position: sticky;
