@@ -25,7 +25,7 @@ Not copied, written fresh in the new repo: `App.jsx` (fullscreen kaleido + deck 
 4. **Pointer ripple host**: `pre.closest("[data-art-host]")` with `parentElement` fallback. Keep the attribute convention, document it in the README; the fallback already makes it safe standalone.
 5. **State persistence lives in `Home.jsx`** (`loadArt`, localStorage key `dh-art-v2`, accent side effects writing `--red`/`--mark`/`--on-accent` onto `document.documentElement`). The new `App.jsx` reimplements this pattern with its own key (`kernel-art-v1`). The accent-propagation effect is worth keeping — it is the "tune the color, the whole page follows" trick — but scope it to the standalone page's own vars.
 6. **Portfolio-only behaviors not to copy**: cursor hint, deck-seen gating, `?deck=1` param, `IDLE_COLORS`/`iconParams` (work-cell thumbnails), glitch page transitions.
-7. **Deployment**: new Vercel project from the new repo. No `api/` directory, no env vars. Ships on the free Vercel default domain; no custom domain in v1. Footer: `Kernel — by Dan He` linking to danhedesign.com.
+7. **Deployment**: new Vercel project from the new repo. No `api/` directory, no env vars. Ships on the Vercel default domain, then moves to `kernel.danhedesign.com` (see 7.2). Footer: `Kernel — by Dan He` linking to danhedesign.com.
 
 ## 3. Image → ASCII, frontend port
 
@@ -73,14 +73,18 @@ kernel/
 
 - Name: **Kernel**.
 - License: **MIT**.
-- Domain: **the free Vercel default** (`kernel-*.vercel.app`). No custom domain in v1. Everything that prints a URL reads one constant, `SITE_URL` in `presets.js`, so moving to a custom domain later is a one-line change.
+- Domain: **kernel.danhedesign.com**, a subdomain of the apex Dan already owns, so it costs nothing beyond a DNS record. Build and deploy on the Vercel default first so nothing is blocked on DNS, then attach the custom domain. Everything that prints a URL reads one constant, `SITE_URL` in `presets.js`, so the switch is a one-line change.
 - Deck **default-open** on the standalone page.
 - **Keep** the ink/paper/red theme.
 
 ## 7. Remaining calls — defaults apply unless Dan objects
 
 1. **Repo**: `github.com/danhe-blip/kernel`, public from the first commit. Dan creates the empty repo (or authorizes `gh` in the implementing session); nothing from the portfolio repo's history is carried over.
-2. **Handoff boundary**: the agent delivers the finished repo with a deploy-ready Vite build and README instructions. Dan does the two steps that need her accounts: import the repo in Vercel, add the CNAME. The agent should not need any of her credentials.
+2. **Handoff boundary**: the agent delivers the finished repo with a deploy-ready Vite build and README instructions. Dan does the three steps that need her accounts, none of which require sharing credentials with the agent:
+   1. Import the repo in Vercel (ships on the default domain immediately).
+   2. Vercel project → Settings → Domains → add `kernel.danhedesign.com`; Vercel then states the exact record to create.
+   3. At the registrar holding `danhedesign.com`, add that record — normally `CNAME` host `kernel` → `cname.vercel-dns.com`. Propagation is usually minutes.
+   4. Set `SITE_URL` in `presets.js` to the custom domain once it resolves.
 3. **Export signature**: the sign-off in copied/downloaded art reads `Kernel — generative study · <SITE_URL>` and stays ON by default, with a deck toggle to turn it off. Attribution by default, but never forced. `SITE_URL` is the single constant that also feeds the README and OG card.
 4. **Mobile**: deck default-open on desktop only; below 900px it starts collapsed behind the [ tune ] tab (same pattern as the portfolio hero). Touch devices still get full slider control once opened.
 5. **Favicon + OG card**: yes, generated from the engine itself — a static frame rendered to PNG. No new visual language.
