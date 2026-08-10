@@ -69,10 +69,20 @@ kernel/
 5. README (GIF, privacy line, data-art-host note), LICENSE, deploy to Vercel.
 6. Phase 2 (separate approval): `skill/` companion exposing the same pipeline as a Claude Code skill.
 
-## 6. Decisions Dan owns before work starts
+## 6. Decided (Dan, Aug 2026)
 
-- Name: **Kernel**? (else rename repo + signature)
-- License: MIT assumed.
-- Domain: `kernel.danhedesign.com` or Vercel default.
-- Deck default-open on the standalone page (recommended: yes, it IS the product).
-- Keep the site's ink/paper/red theme, or neutralize the branding for forks (recommended: keep — it is the taste being demonstrated).
+- Name: **Kernel**.
+- License: **MIT**.
+- Domain: **kernel.danhedesign.com** (deploy to the Vercel default first; Dan adds the CNAME when ready).
+- Deck **default-open** on the standalone page.
+- **Keep** the ink/paper/red theme.
+
+## 7. Remaining calls — defaults apply unless Dan objects
+
+1. **Repo**: `github.com/danhe-blip/kernel`, public from the first commit. Dan creates the empty repo (or authorizes `gh` in the implementing session); nothing from the portfolio repo's history is carried over.
+2. **Handoff boundary**: the agent delivers the finished repo with a deploy-ready Vite build and README instructions. Dan does the two steps that need her accounts: import the repo in Vercel, add the CNAME. The agent should not need any of her credentials.
+3. **Export signature**: the `Kernel — generative study · kernel.danhedesign.com` sign-off stays ON by default in copied/downloaded art, with a deck toggle to turn it off. Attribution by default, but never forced.
+4. **Mobile**: deck default-open on desktop only; below 900px it starts collapsed behind the [ tune ] tab (same pattern as the portfolio hero). Touch devices still get full slider control once opened.
+5. **Favicon + OG card**: yes, generated from the engine itself — a static frame rendered to PNG. No new visual language.
+6. **Analytics**: none in v1. Keeps the README privacy line ("images never leave your machine") unqualified.
+7. **Non-goals for v1**: no npm package of the engine, no CONTRIBUTING.md, no GIF-export, no server anything. Each can come later if the repo earns attention.
