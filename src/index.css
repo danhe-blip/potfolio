@@ -59,27 +59,18 @@ img { max-width: 100%; display: block; }
   z-index: 800;
 }
 .topbar .brand { display: flex; align-items: center; gap: 9px; font-weight: 500; justify-self: start; }
-.mark {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1px;
-  flex-shrink: 0;
-  color: var(--mark, var(--red));
-  transition: color 0.35s ease;
-}
-.mark > span {
-  background: currentColor;
-  display: block;
-  opacity: var(--o);
+.mark { display: block; flex-shrink: 0; overflow: visible; }
+.mark > * {
   animation: mark-settle 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 @keyframes mark-settle {
   from { opacity: 0; transform: scale(0.6); }
-  to { opacity: var(--o); transform: scale(1); }
+  to { opacity: 1; transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .mark > span { animation: none; }
+  .mark > * { animation: none; }
 }
 .topbar nav { display: flex; gap: 22px; }
 .topbar a, .topbar button { color: var(--mut); transition: color 0.15s; }
