@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { ART, SITE } from "./config";
 
 export default function ArtPanel({ art, setArt, onClose }) {
+  const [copied, setCopied] = useState(false);
   const set = (k, v) => setArt((a) => ({ ...a, [k]: v }));
 
   const shuffle = () => {
@@ -17,11 +19,29 @@ export default function ArtPanel({ art, setArt, onClose }) {
     }));
   };
 
-  const copyTxt = () => {
-    const pre = document.querySelector(".kaleido");
-    if (pre) {
-      const txt = `${pre.innerText}\n\n${SITE.artSignature} · ${window.location.origin}`;
-      navigator.clipboard?.writeText(txt).catch(() => {});
+  const copyTxt = async () => {
+    const pre = document.querySelector(".hero-art .kaleido");
+    if (!pre) return;
+    const txt = `${pre.innerText}\n\n${SITE.artSignature} · ${window.location.origin}`;
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(txt);
+      ok = true;
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = txt;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        ok = document.execCommand("copy");
+      } catch {}
+      ta.remove();
+    }
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1400);
     }
   };
 
@@ -57,7 +77,7 @@ export default function ArtPanel({ art, setArt, onClose }) {
           </button>
         ))}
         <button className="act" onClick={shuffle}>[ shuffle ⚂ ]</button>
-        <button className="act" onClick={copyTxt}>[ copy .txt ]</button>
+        <button className="act" onClick={copyTxt}>{copied ? "[ copied ✓ ]" : "[ copy .txt ]"}</button>
       </div>
 
       <div className="deck-row">
