@@ -448,6 +448,7 @@ img { max-width: 100%; display: block; }
   top: var(--bar-h);
   height: calc(100dvh - var(--bar-h));
   border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
   padding: 28px 16px;
   display: flex;
   flex-direction: column;
