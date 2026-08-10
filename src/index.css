@@ -446,15 +446,16 @@ img { max-width: 100%; display: block; }
 .project-rail {
   position: sticky;
   top: var(--bar-h);
-  height: calc(100dvh - var(--bar-h));
+  max-height: calc(100dvh - var(--bar-h));
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 .project-rail button {
-  flex: 1;
-  min-height: 64px;
+  flex: 0 0 auto;
+  padding: 26px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -466,13 +467,13 @@ img { max-width: 100%; display: block; }
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   border-bottom: 1px solid var(--line);
-  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.project-rail button:last-of-type { border-bottom: 0; }
 .project-rail button:hover { color: var(--paper); }
-.project-rail button.on { color: var(--red); border-left-color: var(--red); background: var(--red-dim); }
+.project-rail button.on { color: var(--red); border-right-color: var(--red); background: var(--red-dim); }
 .project-rail-foot {
+  margin-top: auto;
   padding: 16px 0;
   color: var(--mut-2);
   font-size: 9.5px;
@@ -482,6 +483,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid var(--line);
 }
 .rail {
   position: sticky;
