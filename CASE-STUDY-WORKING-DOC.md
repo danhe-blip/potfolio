@@ -48,6 +48,7 @@ Rules that make it read senior:
 Each `WORKS[i].sections[j]` supports:
 
 - `id`, `label` (e.g. "04 The Build"), `headline` (a claim), `body` (plain string, `\n` renders as line break via `white-space: pre-line`)
+- `rules`: array of `{ term, text }`, renders a hairline-separated spec list between the headline and the body. Two columns on desktop (mono uppercase term | body text), stacked on mobile. Use it whenever a section enumerates named mechanisms: a run of `\n` line breaks inside `body` is indistinguishable from natural wrapping on a phone and reads as a wall. `body` is optional when `rules` carries the substance, and reads as the coda after the list.
 - `fig`: string placeholder, renders as a dashed box with the text (use when no real image yet)
 - `img`: single image path, renders inside a `.fig` box (16:9 crop)
 - `imgs`: array of `{ src, cap }`, renders each as `.fig.shot` (no crop, height auto, optional mono caption). Preferred for real screenshots.
@@ -215,7 +216,7 @@ Storytelling recut from tool narrative ("zero Figma") to decision narrative (pro
 1. **01 Context** — "never mocked up": the site had to demonstrate how she works, not describe it.
 2. **02 Decision** — the source of truth moved into production. Two rejected paths (template, Figma-first), then the trade-off stated flat: iteration got faster, articulation got more expensive.
 3. **03 The Material** — the three failure modes (forgets, inflates, defaults to average) as the brief. aiw-diff image.
-4. **04 The System** — five named mechanisms: Persist intent / Protect facts / Contain changes / Require evidence / Decide fast. Then the tension arc kept intact (copy drift forced the screenshot-provable rule, cost paid on purpose). aiw-rules + both verify images.
+4. **04 The System** — five named mechanisms: Persist intent / Protect facts / Contain changes / Require evidence / Decide fast, carried by the `rules` field so each one is a scannable row. Then the tension arc kept intact (copy drift forced the screenshot-provable rule, cost paid on purpose). aiw-rules + both verify images.
 5. **05 Outcome** — only provable claims: site live, tokens pushed into Figma as variables with var() dev syntax, export doubled as an audit, production stays the source of truth. aiw-figma-variables image.
 6. **06 Contribution** — merged with Next: taste/rules/refusals, the transferable principle (match the source of truth to the nature of the product, with Figma's boundary stated), the day-job bridge, link to design-system.
 

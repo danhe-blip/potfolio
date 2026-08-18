@@ -203,7 +203,29 @@ export const WORKS = [
         id: "system",
         label: "04 The System",
         headline: "Every failure mode became a rule.",
-        body: "Persist intent. The rules live in the repo, not in the chat: palette, sharp corners, bracket tags, even punctuation. Every session starts already knowing them.\nProtect facts. Content is separated from component logic, and anything unverified stays an explicit placeholder. Agents never speak for me.\nContain changes. Copy lives in one config file and components hold only logic, so an agent editing words cannot break layout.\nRequire evidence. No visual change is accepted from a summary. The agent renders the real site at desktop and mobile widths, and I review pixels before anything merges.\nDecide fast. Agents bring options with previews, not open questions. The record of refusals is where the taste lives.\n\nOne rule was forced on me. My principle was to let agents run fast, and copy kept breaking it: agents drift grand, and I kept catching claims I would never make. So precision became law, write only what a screenshot can prove, and every user-facing diff still passes through my reading. That cost is permanent. I pay it on purpose.",
+        rules: [
+          {
+            term: "Persist intent",
+            text: "The rules live in the repo, not in the chat: palette, sharp corners, bracket tags, even punctuation. Every session starts already knowing them.",
+          },
+          {
+            term: "Protect facts",
+            text: "Content is separated from component logic, and anything unverified stays an explicit placeholder. Agents never speak for me.",
+          },
+          {
+            term: "Contain changes",
+            text: "Copy lives in one config file and components hold only logic, so an agent editing words cannot break layout.",
+          },
+          {
+            term: "Require evidence",
+            text: "No visual change is accepted from a summary. The agent renders the real site at desktop and mobile widths, and I review pixels before anything merges.",
+          },
+          {
+            term: "Decide fast",
+            text: "Agents bring options with previews, not open questions. The record of refusals is where the taste lives.",
+          },
+        ],
+        body: "One rule was forced on me. My principle was to let agents run fast, and copy kept breaking it: agents drift grand, and I kept catching claims I would never make. So precision became law, write only what a screenshot can prove, and every user-facing diff still passes through my reading. That cost is permanent. I pay it on purpose.",
         imgs: [
           { src: "/work/aiw-rules.png", cap: "CLAUDE.md: the rules every session reads before touching anything" },
           { src: "/work/aiw-verify-desktop.png", cap: "Agent-rendered verification, 1440px" },
