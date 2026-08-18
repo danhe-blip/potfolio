@@ -17,7 +17,7 @@ export const GATED = {
         id: "problem",
         label: "03 Problem & Opportunity",
         headline: "The person who owns the policy can't tune the model.",
-        body: "Trust-and-safety leads at a bank think in rules and obligations. The ML team thinks in thresholds and eval sets. Our real buyers, healthcare and finance early in their ML maturity, needed our engineers to hand-hold every deployment. That friction wasn't a training gap. It was a product gap, and the fix wasn't a better console for the ML team. It was opening the boundary: the person accountable for the policy composes it, tests it, and judges the result beside the people who tune the model, not downstream of them. Whoever opened that boundary first would own the category.",
+        body: "Trust-and-safety leads at a bank think in rules and obligations. The ML team thinks in thresholds and eval sets. Our real buyers, healthcare and finance early in their ML maturity, needed our engineers to hand-hold every deployment. That friction wasn't a training gap. It was a product gap, and the fix wasn't a better console for the ML team. It was opening the boundary: the person accountable for the policy composes it, tests it, and judges the result beside the people who tune the model, not downstream of them. No product on the market had opened that boundary yet. That was the opening.",
       },
       {
         id: "build",
