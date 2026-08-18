@@ -11,13 +11,13 @@ export const GATED = {
         id: "focus",
         label: "02 Focus",
         headline: "I bet the opportunity was who could use it, not what it could do.",
-        body: "I could have kept hardening the API for the engineers who already loved it. I focused elsewhere. This was a genuinely powerful tool, but wielding it well meant thresholds, eval sets, and deployment cycles. The people accountable for what it enforces, the policy owners, couldn't touch it at all. If they could wield it directly, that reach is where the larger business value was, not another model feature. Widening who can hold a powerful tool beats deepening it for the few who already can.",
+        body: "I could have kept hardening the API for the engineers who already loved it. I bet elsewhere. The tool's power was real, but the people accountable for what it enforces, the policy owners, couldn't touch it at all. If they could wield it directly, that reach was worth more than another model feature. Widening who can hold a powerful tool beats deepening it for the few who already can.",
       },
       {
         id: "problem",
         label: "03 Problem & Opportunity",
         headline: "The person who owns the policy can't tune the model.",
-        body: "Trust-and-safety leads at a bank think in rules and obligations. The ML team thinks in thresholds and eval sets. Our real buyers, healthcare and finance early in their ML maturity, needed our engineers to hand-hold every deployment. That friction wasn't a training gap. It was a product gap. The fix was not a better console for the ML team. It was opening the boundary, so the person accountable for the policy composes it, tests it, and judges the result beside the people who tune the model, not downstream of them. Whoever opened that boundary first would own the category.",
+        body: "Trust-and-safety leads at a bank think in rules and obligations. The ML team thinks in thresholds and eval sets. Our real buyers, healthcare and finance early in their ML maturity, needed our engineers to hand-hold every deployment. That friction wasn't a training gap. It was a product gap, and the fix wasn't a better console for the ML team. It was opening the boundary: the person accountable for the policy composes it, tests it, and judges the result beside the people who tune the model, not downstream of them. Whoever opened that boundary first would own the category.",
       },
       {
         id: "build",
@@ -36,7 +36,7 @@ export const GATED = {
         id: "outcome",
         label: "05 Outcome",
         headline: "The loop closed. Our engineers stepped out.",
-        body: "Shipping in January was the start of the loop, not the end. A policy owner now runs the full lifecycle inside the product: compose a guard, evaluate it against real queries in Policy Lab, and review what an optimization run found. That review is the design move I care most about. The run returns a measured gain, but the decision is made on a diff of real examples, which inputs flip, what would change, before anything ships. A metric is something only the ML team can argue with. A diff of real examples is something a policy owner can read and argue with too, which is what puts them inside the review instead of downstream of it. Promote it, and monitoring traces enforcement across full multiturn agent sessions.\n\nAdoption exposed the real last mile. Enterprise customer teams rotate people, and every rotation restarted onboarding: docs existed, but new owners skipped them and asked us directly. I stopped treating it as a documentation problem and recorded interactive demos that walk a new owner through their first session, which is what finally made onboarding fast. In an enterprise product, the first hour is part of the product, not something a doc covers.",
+        body: "Shipping in January was the start of the loop, not the end. A policy owner now runs the full lifecycle inside the product: compose a guard, evaluate it against real queries in Policy Lab, and review what an optimization run found. That review is the design move I care most about. The run returns a measured gain, but the decision is made on a diff of real examples, which inputs flip, what would change, before anything ships. A metric is something only the ML team can argue with. A diff is something a policy owner can read and argue with too, which is what puts them inside the review instead of downstream of it. Promote it, and monitoring traces enforcement across full multiturn agent sessions.\n\nAdoption exposed the real last mile. Enterprise customer teams rotate people, and every rotation restarted onboarding: docs existed, but new owners skipped them and asked us directly. I stopped treating it as a documentation problem and recorded interactive demos that walk a new owner through their first session, which finally made onboarding fast. In an enterprise product, the first hour is part of the product, not something a doc covers. If I rebuilt PolicyGuard, that hour is the one thing I would move earlier.",
         imgs: [
           { src: "/work/pg-policy-lab-step2.png", cap: "Evaluate a guard against real queries" },
           { src: "/work/pg-policy-lab-optimization-detail.png", cap: "Measured gain, with a diff to review and promote" },
@@ -48,17 +48,25 @@ export const GATED = {
         id: "contribution",
         label: "06 Contribution",
         headline: "What was mine: the abstraction, the component, the two-day loop.",
-        body: "Founding design isn't touching every surface. It's setting the few things everything else inherits. Mine were the composition model the product is built on, the card component reused across policy groups, datasets, evaluations, and the query tables on the dashboard and monitoring views, and a way of working: prototyping in code alongside engineers, branching off the PO's branch and sharing two live links to pick a direction, which took Policy Lab from design to deployment in two days over three rounds.",
+        rules: [
+          {
+            term: "The abstraction",
+            text: "The composition model the product is built on: rules into policy groups, policy groups into a guard. Touch the guard, not the policy.",
+          },
+          {
+            term: "The component",
+            text: "One card, reused across policy groups, datasets, evaluations, and the query tables on the dashboard and monitoring views.",
+          },
+          {
+            term: "The two-day loop",
+            text: "Prototyping in code beside engineers: branch off the PO's branch, share two live links, pick a direction. Policy Lab went from design to deployment in two days, over three rounds.",
+          },
+        ],
+        body: "Founding design isn't touching every surface. It's setting the few things everything else inherits. The test is whether the next hire can extend them without me in the room, using the same abstraction, the same components, the same rules. That is what the design-system work is about.",
+        link: { to: "design-system", label: "Open the design system" },
         imgs: [
           { src: "/work/pg-dashboard-query-table.png", cap: "The same query table component, reused on the dashboard" },
         ],
-      },
-      {
-        id: "next",
-        label: "07 Next",
-        headline: "A system the next designer can extend without me.",
-        body: "If I rebuilt PolicyGuard, one thing would move earlier: the first hour. Onboarding turned out to be product surface, and I treated it as a documentation problem until adoption proved otherwise. The rest of the test is whether the next hire can extend what I built without me in the room, using the same abstraction, the same components, the same rules. That is what the design-system work is about.",
-        link: { to: "design-system", label: "Open the design system" },
       },
     ],
   },

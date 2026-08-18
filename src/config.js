@@ -85,7 +85,7 @@ export const WORKS = [
         id: "context",
         label: "01 Context",
         headline: "Guard worked as an API. Every deployment still ran through us.",
-        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and it quietly became our most profitable line. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The capability existed. The product did not. A profitable line proves the need is real, not that anyone has built the right thing around it, and what I built started at zero: the object model, the workflow, and every surface a policy owner touches.",
+        body: "When I joined, Virtue was a handful of people, one product owner per product, two products: Guard and red teaming. Guard shipped as an API you tested against, and it quietly became our most profitable line. Any engineer could call it. But composing real enforcement, choosing what to enforce, tuning it, proving it worked, still leaned on our engineers. The capability existed. The product did not. A profitable line proves the need is real, not that anyone has built the right thing around it. What I built started at zero: the object model, the workflow, and every surface a policy owner touches.",
       },
     ],
   },
