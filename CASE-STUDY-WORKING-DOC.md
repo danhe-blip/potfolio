@@ -27,6 +27,7 @@ Rules that make it read senior:
 - **Every section headline is a claim, not a label.** Not "Context" but "Guard worked as an API. Every deployment still ran through us."
 - **Show a trade-off as a 3-beat arc, not a clean win:** (1) my principle, (2) the domain broke it and I updated, (3) I paid down the cost on purpose. Missing beat 3 reads as compromise; including it reads as managed judgment.
 - **Split Outcome from Contribution.** "The team shipped X" vs "what was mine was the abstraction, the component, the way of working."
+- **Lean over complete (amended Aug 2026).** The 7-beat skeleton is a default, not law. Beats may merge when the split adds no new claim; every sentence must advance one. Senior reads as compression, not coverage. AI Workflow runs six beats: Next folded into Contribution.
 - **Translate breadth into judgment.** Each thing owned must hang off a decision only she would make, or it reads junior.
 - **Attach one transferable principle per section.** Test: state it without naming the product. If it still holds, it is a principle; if not, it is still a description. Bar: specific, non-obvious, transferable. Avoid platitudes ("keep it simple") which read junior.
 - **Show, don't claim.** Prefer evidence a screenshot can prove ("the same card on 5 surfaces") over adjectives.
@@ -207,11 +208,20 @@ Q3-original (which judgment to defend) is answered: code-first, `packages/shared
 7. Outcome/inheritance signals: faster page builds (roughly how much), engineers reaching for shared components unprompted, visual convergence across the two products, where a second designer would start reading the system.
 8. A "system itself" screenshot (product shots prove usage, not the system): shared-ui directory tree, token file code, Storybook, or a component's variant code. Which can she capture?
 
-## AI Workflow — DONE (Aug 2026, replaced Branding as cell 04)
+## AI Workflow — REWRITTEN (Aug 2026, decision-narrative pass)
 
-The story of building this site itself: zero Figma, designed in the medium by directing AI agents. Spine: 01 never mocked up / 02 browser is the canvas, language is the design tool / 03 vibe coding's three failure modes (forgets, inflates, defaults to average) as the brief / 04 a mechanism per failure mode (rules file as memory, placeholders as fact guardrail, config-vs-components as blast radius, screenshot verification, model choice per task, option cards not open questions) plus the tension arc (agents drift grand in copy, precision became a rule, cost paid on purpose) / 05 site live plus the reversal: tokens pushed INTO Figma via MCP with var() dev syntax, Figma documents the system / 06 what was hers: taste, rules, refusals / 07 links to design-system.
+Storytelling recut from tool narrative ("zero Figma") to decision narrative (production-first as a chosen operating model), copy tightened throughout. Six beats now:
 
-Decisions: repo stays private, so no "inspect the repo" claims in copy. No chat-UI screenshots yet (fig placeholders at 03 CLAUDE.md excerpt and 05 Figma variables; Dan captures both). Legacy desktop-OS screenshots are lost; the before/after concept image was dropped. Real images wired: aiw-verify-desktop / aiw-verify-mobile (actual agent verification renders from the build). WorkPage now hides sec-link buttons whose target case is still wip, which also fixes PolicyGuard's design-system link 404.
+1. **01 Context** — "never mocked up": the site had to demonstrate how she works, not describe it.
+2. **02 Decision** — the source of truth moved into production. Two rejected paths (template, Figma-first), then the trade-off stated flat: iteration got faster, articulation got more expensive.
+3. **03 The Material** — the three failure modes (forgets, inflates, defaults to average) as the brief. aiw-diff image.
+4. **04 The System** — five named mechanisms: Persist intent / Protect facts / Contain changes / Require evidence / Decide fast. Then the tension arc kept intact (copy drift forced the screenshot-provable rule, cost paid on purpose). aiw-rules + both verify images.
+5. **05 Outcome** — only provable claims: site live, tokens pushed into Figma as variables with var() dev syntax, export doubled as an audit, production stays the source of truth. aiw-figma-variables image.
+6. **06 Contribution** — merged with Next: taste/rules/refusals, the transferable principle (match the source of truth to the nature of the product, with Figma's boundary stated), the day-job bridge, link to design-system.
+
+Dropped on purpose (inflated or tool-detail): "iteration at the speed of conversation", "designs like me", "cannot drift", "sentence to production in minutes", "five works" (not all published), the model-choice mechanism, the "0 Figma" tag (tags now AI-native / Workflow / Solo). Option-cards mechanism kept as "Decide fast". Pre-rewrite copy recoverable from git history (commit 40a7614, main).
+
+Standing decisions still in force: repo stays private, so no "inspect the repo" claims in copy. Legacy desktop-OS screenshots are lost; the before/after concept image was dropped. All five images wired and unchanged: aiw-diff (03), aiw-rules / aiw-verify-desktop / aiw-verify-mobile (04), aiw-figma-variables (05). WorkPage hides sec-link buttons whose target case is still wip.
 
 ## Branding — archived (was cell 04, replaced by AI Workflow)
 
