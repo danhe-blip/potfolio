@@ -134,7 +134,17 @@ export default function WorkPage({ doc, navigate }) {
           <section key={s.id} className="sec" ref={(el) => (refs.current[s.id] = el)}>
             <div className="label">{s.label}</div>
             <h2>{s.headline}</h2>
-            <p>{renderBody(s.body)}</p>
+            {s.rules && (
+              <div className="rules">
+                {s.rules.map((r) => (
+                  <div key={r.term} className="rule">
+                    <div className="rule-term">{r.term}</div>
+                    <p className="rule-text">{renderBody(r.text)}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {s.body && <p>{renderBody(s.body)}</p>}
             {s.diagram === "composition" && <CompositionDiagram />}
             {s.diagram === "layers" && <SystemLayers />}
             {s.compare && (
