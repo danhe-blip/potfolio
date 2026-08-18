@@ -188,7 +188,7 @@ export const WORKS = [
         id: "decision",
         label: "02 Decision",
         headline: "The source of truth moved into production.",
-        body: "Two paths got rejected. A template would ship fast and prove nothing. Figma-first would mean designing everything twice, with loss in every translation, for an experience that lives in responsive behavior, generative visuals, and interaction. So the repository became the source of truth and the browser the canvas.\n\nThe trade-off was immediate: iteration got faster, articulation got more expensive. Vague direction produced generic output. Missing facts invited invention. The design skill moved from drawing screens to writing constraints that survive execution.",
+        body: "I rejected two obvious paths. A template would ship fast and prove nothing. Figma-first would mean designing everything twice, with loss in every translation, for an experience that lives in responsive behavior, generative visuals, and interaction. So the repository became the source of truth and the browser the canvas.\n\nThe trade-off was immediate: iteration got faster, articulation got more expensive. Vague direction produced generic output. Missing facts invited invention. The design skill moved from drawing screens to writing constraints that survive execution.",
       },
       {
         id: "material",
