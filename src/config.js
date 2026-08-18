@@ -176,7 +176,7 @@ export const WORKS = [
     tagline: "Designing the workflow around AI, not just designing with it",
     sub: "I designed and shipped The Index directly in code, directing AI agents under rules they must obey: intent, facts, and final quality stayed mine. Figma came last, generated from what shipped.",
     tags: ["AI-native", "Workflow", "Solo"],
-    result: "The Index is live, and the workflow that built it is repeatable: design intent persists across sessions, agent changes stay contained, and nothing ships until I have seen it rendered.",
+    result: "The Index is live, designed entirely in production. The method is the deliverable: with agents, design becomes writing constraints that survive execution.",
     sections: [
       {
         id: "context",
