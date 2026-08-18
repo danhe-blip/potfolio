@@ -144,7 +144,7 @@ export const WORKS = [
     tagline: "One language across every product",
     sub: "The shared language behind Virtue's products: tokens, components, and rules, built on a shadcn foundation and grown inside real product work.",
     tags: ["Systems", "Tokens", "Components"],
-    result: "Two AI products ship from one set of parts. The system was treated as a product, not a project, and it grew through use.",
+    result: "Two AI products ship from one set of parts, and the third will inherit them on day one. Treated as a product, not a project, grown through use.",
     gate: {
       label: "Locked",
       headline: "The rest of this case opens by name.",
